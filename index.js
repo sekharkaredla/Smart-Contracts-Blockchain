@@ -7,7 +7,7 @@ VotingContract = web3.eth.contract(abi);
 contractInstance = VotingContract.at(
   "0xa84eb3d8e406d1f98d8a17ef738412551743ef83"
 );
-candidates = { Rama: "candidate-1", Nick: "candidate-2", Jose: "candidate-3" };
+candidates = { Aijaaz: "candidate-1", Sekhar: "candidate-2", Pranith: "candidate-3" };
 
 function voteForCandidate() {
   candidateName = $("#candidate").val();

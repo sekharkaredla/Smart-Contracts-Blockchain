@@ -15,7 +15,8 @@ contractInstance = VotingContract.at(
 candidates = {
   Aijaaz: "candidate-1",
   Sekhar: "candidate-2",
-  Pranith: "candidate-3"
+  Pranith: "candidate-3",
+  Alekhya: "candidate-4"
 };
 
 function voteForCandidate() {
@@ -25,7 +26,7 @@ function voteForCandidate() {
     candidateName,
     voterHash,
     { from: web3.eth.accounts[0] },
-    function() {
+    function () {
       let div_id = candidates[candidateName];
       console.log(
         contractInstance.totalVotesFor.call(candidateName).toString()
@@ -37,7 +38,7 @@ function voteForCandidate() {
   );
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   candidateNames = Object.keys(candidates);
   for (var i = 0; i < candidateNames.length; i++) {
     let name = candidateNames[i];

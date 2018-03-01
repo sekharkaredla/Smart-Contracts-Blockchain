@@ -1,6 +1,6 @@
 Web3 = require('web3');
 var fs = require("fs");
-//var prompt = require('prompt');
+var prompt = require('prompt');
 web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 web3.eth.accounts;
 code = fs.readFileSync('Voting.sol').toString();
@@ -13,8 +13,8 @@ deployedContract = VotingContract.new(['Aijaaz','Sekhar','Pranith'],{data: byteC
 setTimeout(function(){
 	contractInstance = VotingContract.at(deployedContract.address);
 	console.log("contractInstance address:" + contractInstance.address);
-	//prompt.start();
-	//prompt.get(['Enter to quit'], function (err, result) {
-	//	console.log('Finished');
-	//});
+	prompt.start();
+	prompt.get(['Enter to quit'], function (err, result) {
+		console.log('Finished');
+	});
 }, 5000);

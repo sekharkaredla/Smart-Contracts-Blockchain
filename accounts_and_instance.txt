@@ -8,4 +8,4 @@
   '0x3b1c49073e246bd4f0ec2d3164b2f7fcc59cf6e1',
   '0x2457e584b973f2be1e0552c30eb764c567a3db7a',
   '0x884b8b71daf1bac927c6b7908c0fb4bfc7816fbf' ]
-contractInstance address:0x82e78996805c2b61f91baca2132fa85f838feaec
+contractInstance address:0xf1b4843c89aeef2bc65bbe710f04b7ae27cee67d

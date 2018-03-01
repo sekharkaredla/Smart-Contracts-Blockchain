@@ -1,12 +1,17 @@
-web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+//web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); for local
+web3 = new Web3(new Web3.providers.HttpProvider("http://34.210.96.63:8545"));  //for aws
 abi = JSON.parse(
   '[{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"votedList","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"voterHashNew","type":"bytes32"}],"name":"validVoter","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"totalVotesFor","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"validCandidate","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"votesReceived","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"candidate","type":"bytes32"},{"name":"voterHash","type":"bytes32"}],"name":"voteForCandidate","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"candidateList","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"candidateNames","type":"bytes32[]"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]'
 );
 VotingContract = web3.eth.contract(abi);
 
+//contractInstance = VotingContract.at(
+//  "0x8935bbefe12396f98771ae7f1c2aa313572d383b"
+//);
+
 contractInstance = VotingContract.at(
-  "0x8935bbefe12396f98771ae7f1c2aa313572d383b"
-);
+  "0x6e9559ac73f7d56a885ff2a630e11477365095bb"
+); //aws
 candidates = {
   Aijaaz: "candidate-1",
   Sekhar: "candidate-2",

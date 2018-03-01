@@ -13,6 +13,9 @@ deployedContract = VotingContract.new(['Aijaaz','Sekhar','Pranith'],{data: byteC
 setTimeout(function(){
 	contractInstance = VotingContract.at(deployedContract.address);
 	console.log("contractInstance address:" + contractInstance.address);
+	var stream = fs.createWriteStream("contactInst.txt");
+	stream.write("contractInstance address:" + contractInstance.address);
+	stream.end();
 	//prompt.start();
 	//prompt.get(['Enter to quit'], function (err, result) {
 	//	console.log('Finished');

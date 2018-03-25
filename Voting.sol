@@ -6,9 +6,11 @@ contract Voting {
   
   bytes32[] public candidateList;
   bytes32[] public votedList;
+  bytes32[] public voterList;
 
-  function Voting(bytes32[] candidateNames) public {
+  function Voting(bytes32[] candidateNames,bytes32[] voterNames) public {
     candidateList = candidateNames;
+    voterList = voterNames;
     
   }
 
@@ -20,18 +22,28 @@ contract Voting {
   
   function voteForCandidate(bytes32 candidate, bytes32 voterHash) public {
     require(validCandidate(candidate));
-    votesReceived[candidate] += 1;
     require(validVoter(voterHash));
+    require(validVoterNotRepeat(voterHash));
+    votesReceived[candidate] += 1;
     votedList.push(voterHash);
   }
 
-  function validVoter(bytes32 voterHashNew) view public returns (bool) {
+  function validVoterNotRepeat(bytes32 voterHashNew) view public returns (bool) {
     for(uint i=0; i< votedList.length; i++){
       if(votedList[i] == voterHashNew){
         return false;
       }
     }
     return true;
+  }
+
+  function validVoter(bytes32 voterHash) view public returns (bool) {
+  for(uint i=0;i< voterList.length; i++){
+    if(voterHash == voterList[i]){
+    return true;
+      }
+    }
+    return false;
   }
 
   function validCandidate(bytes32 candidate) view public returns (bool) {

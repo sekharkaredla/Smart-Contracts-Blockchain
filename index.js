@@ -10,7 +10,7 @@ VotingContract = web3.eth.contract(abi);
 // );
 
 contractInstance = VotingContract.at(
-  "0x43c60da6b5135f579b24c5fd8414659208efe4f8"
+  "0x76fdfede957f09685862d67328224a876f914d76"
 ); //aws
 candidates = {
   Aijaaz: "candidate-1",

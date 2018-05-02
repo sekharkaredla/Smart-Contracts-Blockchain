@@ -12,7 +12,7 @@ function test($data){
 if($_SERVER['REQUEST_METHOD']=='POST'){
   $servername='localhost';
   $username='voter_admin';
-  $password='password';
+  $password='pandu123';
   $database='voterdb';
   $conn=new mysqli($servername,$username,$password,$database);
     if($conn->connect_error){
@@ -28,6 +28,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     if($row['password']==md5($pass)){
       $_SESSION['user']=$user;
       $_SESSION['voter_hash']=$row['voter_hash'];
+      $sql="select event_name from event_details where event_id='".$row['event_id']."'";
+      $result2=$conn->query($sql);
+      $event_row=$result2->fetch_assoc();
+      $_SESSION['event_id']=$row['event_id'];
+      $_SESSION['event_name']=$event_row['event_name'];
       header('Location:voting_page.php');
       die();
     }

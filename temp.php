@@ -4,8 +4,8 @@ if(!$_SESSION['user']){
   header('Location:index.html');
   die();
 }
-$fileContents = file_get_contents("./candidate_".$_SESSION['event_id'].".json");
-$json = json_decode($fileContents, true);
+$fileContents = file_get_contents("./candidate_".$_SESSION['event_id']).".json";
+$json = json_decode($string, true);
 $candidateList = $json[$_SESSION['event_id']]['candidates'];
 $candidateLength = $json[$_SESSION['event_id']]['candidateLength'];
 ?>
@@ -46,13 +46,28 @@ $candidateLength = $json[$_SESSION['event_id']]['candidateLength'];
           <?php
           for($temp=0;$temp<$candidateLength;$temp++)
           {
-            $temp2 = $temp +1;
           echo "<tr>";
-            echo "<td>".$candidateList[$temp]."</td>";
-            echo "<td id = \"candidate-".$temp2."\"></td>";
-            echo "</tr>";
+            echo "<td>".$candidateList[$temp]."<td/>";
+            echo "<td>candidate-".$temp."<td/>";
+            echo "<tr/>";
           }
           ?>
+          <tr>
+            <td>Aijaaz</td>
+            <td id="candidate-1"></td>
+          </tr>
+          <tr>
+            <td>Sekhar</td>
+            <td id="candidate-2"></td>
+          </tr>
+          <tr>
+            <td>Pranith</td>
+            <td id="candidate-3"></td>
+          </tr>
+          <tr>
+            <td>Alekhya</td>
+            <td id="candidate-4"></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -64,7 +79,7 @@ $candidateLength = $json[$_SESSION['event_id']]['candidateLength'];
             <label for="candidate">Candidate Name</label>
           </div>
           <div class="input-field col s6">
-            <input id="voterHash" type="text" class="validate" value="<?php echo htmlspecialchars($_SESSION['voter_hash']); ?>">
+            <input id="voterHash" type="text" class="validate" value="<?php echo htmlspecialchars($_SESSION['voter_hash']); ?>" readonly>
             <label for="voterHash">Voter Hash(Self Generated)</label>
           </div>
           <center>

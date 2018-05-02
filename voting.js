@@ -6,9 +6,9 @@ abi = JSON.parse(
 VotingContract = web3.eth.contract(abi);
 
 contractInstance = VotingContract.at(
- "0x6e97a23e333a3f6e22101bc05a427616c2924d82"
+ "0x6e45746839367cc2ac148e62068fbd64391ba7ef"
 );
-
+// console.log(contractInstance.getCandidates.call())
 // contractInstance = VotingContract.at(
 //   "0x76fdfede957f09685862d67328224a876f914d76"
 // ); //aws
@@ -36,7 +36,7 @@ function voteForCandidate() {
         contractInstance.totalVotesFor.call(candidateName).toString()
       );
     }
-  );
+  ); 
 }
 
 $(document).ready(function () {

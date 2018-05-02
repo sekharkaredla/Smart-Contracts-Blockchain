@@ -13,7 +13,14 @@ deployedContract = VotingContract.new(['Aijaaz','Sekhar','Pranith','Alekhya'],we
 setTimeout(function(){
 	contractInstance = VotingContract.at(deployedContract.address);
 	console.log("contractInstance address:" + contractInstance.address);
+	var fs = require('fs');
+	fs.writeFile("./nodesetup_output.txt", contractInstance.address + "  " + web3.eth.accounts, function(err) {
+    if(err) {
+        return console.log(err);
+    }
 
+    console.log("nodesetup_output saved!");
+}); 
 	prompt.start();
 	prompt.get(['Enter to quit'], function (err, result) {
 		console.log('Finished');

@@ -9,8 +9,8 @@ contract Voting {
   bytes32[] public voterList;
 
   function Voting(bytes32[] candidateNames,bytes32[] voterNames) public {
-    voterList = voterNames;
     candidateList = candidateNames;
+    voterList = voterNames;
   }
 
   function totalVotesFor(bytes32 candidate) view public returns (uint8) {
@@ -53,7 +53,7 @@ contract Voting {
     }
     return false;
   }
-
+  /*
   function getCandidates() view public returns (bytes){
   bytes memory b = new bytes(candidateList.length*32);
   uint temp=0;
@@ -66,5 +66,6 @@ contract Voting {
   }
   return b;
   }
+  */
 }
 

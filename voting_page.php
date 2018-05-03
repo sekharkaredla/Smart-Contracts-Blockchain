@@ -6,8 +6,8 @@ if(!$_SESSION['user']){
 }
 $fileContents = file_get_contents("./candidate_".$_SESSION['event_id'].".json");
 $json = json_decode($fileContents, true);
-$candidateList = $json[$_SESSION['event_id']]['candidates'];
-$candidateLength = $json[$_SESSION['event_id']]['candidateLength'];
+$candidateList = $json['candidateDetails']['candidates'];
+$candidateLength = $json['candidateDetails']['candidateLength'];
 ?>
 <html>
 <head>

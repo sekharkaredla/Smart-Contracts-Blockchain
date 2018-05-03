@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+<script type="text/javascript">
+// 	function loadDoc() {
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             console.log(
+//             JSON.parse(this.responseText).address);
+//        }
+//     };
+//     xhttp.open("GET", "https://s3.ap-south-1.amazonaws.com/smart-contracts-blockchain/temp.json", true);
+//     xhttp.send();
+// }
+// loadDoc()
+
+const url = 'https://s3.ap-south-1.amazonaws.com/smart-contracts-blockchain/contract_id1.json';
+fetch(url)
+  .then((resp) => resp.json()) // Transform the data into json
+  .then(function(data) {
+    // Create and append the li's to the ul
+    console.log(data);
+    })
+</script>
+</body>
+</html>

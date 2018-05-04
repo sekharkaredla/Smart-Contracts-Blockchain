@@ -33,7 +33,7 @@ setTimeout(function(){
     }
 
     console.log("nodesetup_output saved!");
-}); 
+});
 	prompt.start();
 	prompt.get(['Enter to quit'], function (err, result) {
 		console.log('Finished');

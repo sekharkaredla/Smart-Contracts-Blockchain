@@ -4,10 +4,19 @@
 </head>
 <body>
 <h1>Voters Login to Access Distributed Services</h1>
+<h3>USER Login</h3>
 <form action = "login_check.php" method="post">
 Username : <input type="text" name="username" id = "uid" required><br/>
 Password : <input type="Password" name="password" id = "pid" required><br/>
 <input type="submit" name="login" value="login"/>
+</form>
+<br/>
+<br/>
+<h3>ADMIN Login</h3>
+<form method="post" action="admin.php">
+	admin username : <input type="text" name="adminid" required><br/>
+	admin password : <input type="password" name="adminpass" required><br/>
+	<input type="submit" name="login" value="login"/>
 </form>
 </body>
 </html>

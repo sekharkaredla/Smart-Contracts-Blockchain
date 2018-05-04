@@ -5,7 +5,7 @@ if(!$_SESSION['user']){
   header('Location:index.html');
   die();
 }
-$fileContents = file_get_contents("https://s3.ap-south-1.amazonaws.com/smart-contracts-blockchain/candidates_".$_SESSION['event_id'].".json");
+$fileContents = file_get_contents("https://s3.ap-south-1.amazonaws.com/smart-contracts-blockchain/candidate_".$_SESSION['event_id'].".json");
 $json = json_decode($fileContents, true);
 $candidateList = $json['candidateDetails']['candidates'];
 $candidateLength = $json['candidateDetails']['candidateLength'];

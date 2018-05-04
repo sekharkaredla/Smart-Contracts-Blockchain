@@ -77,6 +77,8 @@ try {
 } catch (S3Exception $e) {
     echo $e->getMessage() . PHP_EOL;
 }
+// $out = shell_exec('/usr/local/bin/pm2 start /Users/roshni/Desktop/JPMC_Project/smart-contracts-blockchain/notesetup.js -- '.$event_id);
+// echo $out;
 die();
 }
 ?>

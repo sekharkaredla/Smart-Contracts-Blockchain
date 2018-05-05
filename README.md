@@ -4,5 +4,5 @@
 
 * Alekhya Reddy
 * Sekhar Karedla
-* Mohammad Aijaaz
+* Mohammed Aijaaz
 * R Pranith Kumar

@@ -83,15 +83,39 @@ die();
 }
 ?>
 <html>
+
 <head>
-	<title>Admin Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <title>Admin Page</title>
 </head>
-<body>
-<form action="" method="post">
-  Event Id : <input type="text" name="event_id"/><br/>
-  Event Name : <input type="text" name="event_name"/><br/>
-  Candidate Names : <input type="textarea" name="candidate_names"/><br/>
-  <input type="submit" value = "Submit" name="SubmitButton"/>
-</form>
+
+<body style="  background: linear-gradient(to right, #8e9eab, #eef2f3);">
+    <div class="container">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 10%; ">
+            <center>
+                <h3>Admin</h3>
+            </center>
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="evid">Event ID</label>
+                    <input type="text" class="form-control" name="event_id" id="evid" placeholder="Enter event id" required/>
+                </div>
+                <div class="form-group">
+                    <label for="evname">Event Name</label>
+                    <input type="text" class="form-control" name="event_name" id="evname" placeholder="Enter event name" required/>
+                </div>
+                <div class="form-group">
+
+                    <label for="cnid">Candidate Names</label>
+                    <input type="textarea" class="form-control" name="candidate_names" id="cnid" placeholder="Enter candidate names" required/>
+                </div>
+                <input type="submit" class="btn btn-outline-dark btn-lg btn-block" value="Submit" name="SubmitButton" />
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

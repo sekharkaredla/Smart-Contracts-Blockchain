@@ -1,0 +1,9 @@
+<script type="text/javascript" src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script type="text/javascript">
+
+  if(typeof web3 !== 'undefined')
+    web3 = new Web3(web3.currentProvider);
+  else
+    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:4000"));
+
+</script>

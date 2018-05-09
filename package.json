@@ -4,8 +4,10 @@
   "description": "## Project Members",
   "main": "file_upload.js",
   "dependencies": {
+    "aws-sdk": "^2.235.1",
     "dotenv": "^5.0.1",
     "ganache-cli": "^6.1.0",
+    "mysql": "^2.15.0",
     "pm2": "^2.10.3",
     "prompt": "^1.0.0",
     "request": "^2.85.0",

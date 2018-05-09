@@ -17,14 +17,20 @@ const url_candidate = 'https://s3.ap-south-1.amazonaws.com/smart-contracts-block
 
 //setTimeout(function(){}, 5000);
 function voteForCandidate() {
+  fetch(url_candidate)
+.then((resp) => resp.json()) // Transform the data into json
+.then(function(data) {
+  candidate_list = data_candidate.candidateDetails.candidates;
   candidateName = $("#candidate").val();
   voterHash = $("#voterHash").val();
+  var temp = candidate_list.indexOf(candidateName);
+  temp = temp +1;
   contractInstance.voteForCandidate(
     candidateName,
     voterHash,
     { from: web3.eth.accounts[0] },
     function () {
-      let div_id = candidates[candidateName];
+      let div_id = 'candidate-'+temp;
       console.log(
         contractInstance.totalVotesFor.call(candidateName).toString()
       );
@@ -33,6 +39,7 @@ function voteForCandidate() {
       );
     }
   );
+});
 }
 
 $(document).ready(function () {
@@ -62,10 +69,10 @@ function setCandidates(){
   candidate_list = data_candidate.candidateDetails.candidates;
   // console.log(candidate_list);
   candidate_length = data_candidate.candidateDetails.candidatelength;
-  for(var iter = 0;iter<candidate_length;iter++){
-     var temp = iter+1;
-     candidates[candidate_list[iter]] = 'candidate-'+temp;
-  }
+  // for(var iter = 0;iter<candidate_length;iter++){
+  //    var temp = iter+1;
+  //    candidates[candidate_list[iter]] = 'candidate-'+temp;
+  // }
   /* candidateNames = Object.keys(candidates);
   for (var i = 0; i < candidateNames.length; i++) {
     let name = candidateNames[i];

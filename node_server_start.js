@@ -1,4 +1,5 @@
 const mysql = require('mysql');
+var fs = require('fs');
   var shell = require('shelljs');
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -18,8 +19,9 @@ connection.query('SELECT * FROM event_details WHERE node_server=1', (err,rows) =
   // console.log(rows);
   for(var each = 0; each < rows.length; each++)
   {
+    fs.createReadStream('nodesetup.js').pipe(fs.createWriteStream('nodesetup_'+rows[each]['event_id']+'.js'));
     // console.log(rows[each]['event_id']);
-shell.exec('pm2 start nodesetup.js -- '+rows[each]['event_id'], function(code, output) {
+shell.exec('pm2 start nodesetup_'+rows[each]['event_id']+'.js -- '+rows[each]['event_id'], function(code, output) {
   console.log('Exit code:', code);
   console.log('Program output:', output);
 });

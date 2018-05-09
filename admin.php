@@ -104,7 +104,7 @@ die();
             <center>
                 <h3>Admin</h3>
             </center>
-            <form action="" method="post">
+            <form action="index.html" method="post">
                 <div class="form-group">
                     <label for="evid">Event ID</label>
                     <input type="text" class="form-control" name="event_id" id="evid" placeholder="Enter event id" required/>

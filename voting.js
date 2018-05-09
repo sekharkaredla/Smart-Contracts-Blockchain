@@ -62,10 +62,10 @@ function setCandidates(){
   candidate_list = data_candidate.candidateDetails.candidates;
   // console.log(candidate_list);
   candidate_length = data_candidate.candidateDetails.candidatelength;
-  // for(var iter = 0;iter<candidate_length;iter++){
-  //   var temp = iter+1;
-  //   candidates[candidate_list[iter]] = 'candidate-'+temp;
-  // }
+  for(var iter = 0;iter<candidate_length;iter++){
+     var temp = iter+1;
+     candidates[candidate_list[iter]] = 'candidate-'+temp;
+  }
   /* candidateNames = Object.keys(candidates);
   for (var i = 0; i < candidateNames.length; i++) {
     let name = candidateNames[i];

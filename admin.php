@@ -19,7 +19,7 @@ if($adminid != 'admin' || md5($adminpass) != '21232f297a57a5a743894a0e4a801fc3')
 }
 }
 else{
-  $servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
+  $servername='52.26.129.162:3306';
   $username='uopAdmin123';
   $password='pandu123';
   $database='voterdb';

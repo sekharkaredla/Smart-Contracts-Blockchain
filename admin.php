@@ -77,6 +77,7 @@ try {
 } catch (S3Exception $e) {
     echo $e->getMessage() . PHP_EOL;
 }
+  header('Location:index.html');
 // $myfile = fopen("voter_event.txt", "w");
 // fwrite($myfile,$event_id);
 // fclose($myfile);
@@ -104,7 +105,7 @@ die();
             <center>
                 <h3>Admin</h3>
             </center>
-            <form action="index.html" method="post">
+            <form action="" method="post">
                 <div class="form-group">
                     <label for="evid">Event ID</label>
                     <input type="text" class="form-control" name="event_id" id="evid" placeholder="Enter event id" required/>

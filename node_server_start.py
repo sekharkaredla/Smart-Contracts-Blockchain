@@ -1,4 +1,4 @@
-import time
+import datetime
 import mysql.connector
 from mysql.connector import errorcode
 from shutil import copyfile
@@ -23,4 +23,5 @@ while True:
 		cursor.execute('update event_details set node_server=0 where event_id='+each_row[0])
 		cursor.close()
 		cnx.commit()
+	print datetime.datetime.now()
 	time.sleep(5)

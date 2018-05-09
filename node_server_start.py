@@ -21,7 +21,7 @@ while True:
 		copyfile('./nodesetup.js', './nodesetup_'+each_row[0]+'.js')
 		os.system('pm2 start nodesetup_'+each_row[0]+'.js -- '+each_row[0])
 		cursor = cnx.cursor()
-		cursor.execute('update event_details set node_server=0 where event_id='+each_row[0])
+		cursor.execute('update event_details set node_server=0 where event_id="'+each_row[0]+'"')
 		cursor.close()
 		cnx.commit()
 	print datetime.datetime.now()

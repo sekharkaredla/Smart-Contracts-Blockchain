@@ -1,0 +1,26 @@
+{
+  "name": "smart-contracts-blockchain",
+  "version": "1.0.0",
+  "description": "## Project Members",
+  "main": "file_upload.js",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "ganache-cli": "^6.1.0",
+    "pm2": "^2.10.3",
+    "prompt": "^1.0.0",
+    "request": "^2.85.0",
+    "solc": "^0.4.23",
+    "web3": "^0.20.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/pranithkumar/smart-contracts-blockchain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/pranithkumar/smart-contracts-blockchain#readme"
+}

@@ -30,7 +30,7 @@ else{
   }
   $event_id = $_POST['event_id'];
   $event_name = $_POST['event_name'];
-  $sql = 'insert into event_details values("'.$event_id.'","'.$event_name.'");';
+  $sql = 'insert into event_details values("'.$event_id.'","'.$event_name.'",'."1".');';
   echo $sql;
   if ($conn->query($sql) === FALSE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
@@ -77,6 +77,12 @@ try {
 } catch (S3Exception $e) {
     echo $e->getMessage() . PHP_EOL;
 }
+// $myfile = fopen("voter_event.txt", "w");
+// fwrite($myfile,$event_id);
+// fclose($myfile);
+
+
+// exec("sudo -u root -S bash /home/sekhar/Desktop/smart-contracts-blockchain/sample.sh < ~/.sudopass/sudopass.txt");
 // $out = shell_exec('/usr/local/bin/pm2 start /Users/roshni/Desktop/JPMC_Project/smart-contracts-blockchain/notesetup.js -- '.$event_id);
 // echo $out;
 die();

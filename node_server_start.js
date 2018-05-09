@@ -2,8 +2,8 @@ const mysql = require('mysql');
 var fs = require('fs');
   var shell = require('shelljs');
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'voter_admin',
+  host: 'uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com',
+  user: 'uopAdmin123',
   password: 'pandu123',
   database: 'voterdb'
 });

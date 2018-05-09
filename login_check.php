@@ -10,8 +10,8 @@ function test($data){
 }
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
-  $servername='localhost';
-  $username='voter_admin';
+  $servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
+  $username='uopAdmin123';
   $password='pandu123';
   $database='voterdb';
   $conn=new mysqli($servername,$username,$password,$database);

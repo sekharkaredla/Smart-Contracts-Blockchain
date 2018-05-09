@@ -19,8 +19,8 @@ if($adminid != 'admin' || md5($adminpass) != '21232f297a57a5a743894a0e4a801fc3')
 }
 }
 else{
-  $servername='localhost';
-  $username='voter_admin';
+  $servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
+  $username='uopAdmin123';
   $password='pandu123';
   $database='voterdb';
   $conn=new mysqli($servername,$username,$password,$database);

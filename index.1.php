@@ -112,7 +112,7 @@
 								</div>
 								<div class="form-group">
 									<!-- <label for="ename">Event Name</label> -->
-									<select name="eventlist" class="form-control myinput" style="height: 7%" id="el" >
+									<select name="eventlist" class="form-control myinput" style="height: 3em" id="el" >
 									<?php
 										$servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
 										$username='uopAdmin123';
@@ -129,7 +129,7 @@
 											if ($result->num_rows > 0) {
 											// output data of each row
 											while($row = $result->fetch_assoc()) {
-												echo"<option value=".$row['event_id'].">".$row['event_name']."</option>"; 
+												echo"<option class=\"options\" value=".$row['event_id'].">".$row['event_name']."</option>"; 
 											}}
 											$conn->close();
 										?>

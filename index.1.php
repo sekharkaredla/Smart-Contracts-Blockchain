@@ -74,22 +74,86 @@
 							<input type="submit" class="btn btn-primary btn-lg btn-block mybutton" name="login" value="Login" />
 						</form>
 					</div>
-					<div id="register" style="display: none;">
-						<form action="new_voter.php" id="reg" method="post">
-							<input type="submit" class="btn btn-primary btn-lg btn-block mybutton" name="register" value="Register" />
-						</form>
-					</div>
 					<center>
-						<p id="signuptext">Don't have an account? Sign up here</p>
+						<span id="signuptextspan">
+							<p id="signuptext">Don't have an account? Sign up here</p>
+						</span>
 						<script>
 							$(function () {
 								$('#signuptext').click(function () {
-									$("#logins").toggle()
-									$("#register").toggle()
+									console.log("hello");
+									$("#logins").toggle();
+									$("#register").toggle();
 								})
 							})
 						</script>
 					</center>
+				</div>
+			</div>
+			<div id="register" style="display: none; padding: 8em">
+				<div class="row">
+					<div class="col-sm">
+						<img src="./register.png" style="height: 16em;"/>
+					</div>
+					<div class="col-sm">
+						<div>
+							<center>
+								<h5>New User Sign Up </h5>
+							</center>
+							<form   id="reg" method="post" action="new_voter_backend.php">
+								<div class="form-group">
+									<!-- <label for="uidr">Email addres</label> -->
+									<input type="text" class="form-control myinput" id="uidr" name="username" aria-describedby="emailHelp" placeholder="Enter username"
+									required>
+								</div>
+								<div class="form-group">
+									<!-- <label for="pidr">Password</label> -->
+									<input type="Password" class="form-control myinput" name="password" id="pidr" placeholder="Enter password" required>
+								</div>
+								<div class="form-group">
+									<!-- <label for="ename">Event Name</label> -->
+									<select name="eventlist" class="form-control myinput" style="height: 7%" id="el" >
+									<?php
+										$servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
+										$username='uopAdmin123';
+										$password='pandu123';
+										$database='voterdb';
+										$conn = new mysqli($servername, $username, $password, $database);
+										if ($conn->connect_error) 
+										{
+											die("Connection failed: " . $conn->connect_error);
+										}
+										$sql="select * from event_details";
+										$result = $conn->query($sql);
+
+											if ($result->num_rows > 0) {
+											// output data of each row
+											while($row = $result->fetch_assoc()) {
+												echo"<option value=".$row['event_id'].">".$row['event_name']."</option>"; 
+											}}
+											$conn->close();
+										?>
+										
+									</select>
+								</div>
+								<input type="submit" class="btn btn-primary btn-lg btn-block mybutton" name="register" value="Register" />
+								<center>
+									<span id="signuptextspan" >
+										<p id="logintext" style="margin-top: 2%">Already have an account? Login here</p>
+									</span>
+									<script>
+										$(function () {
+											$('#logintext').click(function () {
+												$("#logins").toggle();
+												$("#register").toggle();
+											})
+										})
+									</script>
+								</center>
+							</form>
+							
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

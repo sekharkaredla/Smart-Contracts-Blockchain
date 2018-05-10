@@ -8,6 +8,21 @@
   padding: 2%;
   background: linear-gradient(to right, #2657eb, #de6161);
 }
+
+.myinput1 {
+  border-radius: 300px;
+  background-color: #e0e0e0;
+}
+.mybutton1 {
+  border-radius: 300px;
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+}
+
+.mybutton2 {
+  border-radius: 300px;
+  background: linear-gradient(to right, #2657eb, #de6161);
+}
+
 .toggle.ios,
 .toggle-off.ios {
   border-radius: 20px;
@@ -29,3 +44,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* #signuptext:hover {
+  text-decoration: underline;
+  cursor: pointer;
+} */
+
+#signuptextspan:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

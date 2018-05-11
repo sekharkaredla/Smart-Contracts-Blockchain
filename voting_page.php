@@ -74,7 +74,7 @@ $candidateLength = $json['candidateDetails']['candidateLength'];
                 for($temp=0;$temp<$candidateLength;$temp++)
                 {
                   $temp2 = $temp +1;
-                  echo"<option class=\"options\" value=\"".$candidateList[$temp]."\" >".$candidateList[$temp]."</option>"; 
+                  echo"<option class=\"options\" value=\"candidate-".$temp2."\" >".$candidateList[$temp]."</option>"; 
                 }
             ?>
             </select>

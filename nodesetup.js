@@ -27,13 +27,21 @@ setTimeout(function(){
 	s3.putObject({Bucket: 'smart-contracts-blockchain',Key: 'contract_'+process.argv[2]+'.json',Body: JSON.stringify(obj),ACL:'public-read' ,ContentType: "application/json"},function(err,data){console.log(JSON.stringify(err));});
 	console.log("contractInstance address:" + contractInstance.address);
 	var fs = require('fs');
-	fs.writeFile("./nodesetup_output.txt", contractInstance.address + "  " + web3.eth.accounts, function(err) {
-    if(err) {
-        return console.log(err);
-    }
-
-    console.log("nodesetup_output saved!");
+// 	fs.writeFile("./nodesetup_output.txt", contractInstance.address + "  " + web3.eth.accounts, function(err) {
+//     if(err) {
+//         return console.log(err);
+//     }
+//
+//     console.log("nodesetup_output saved!");
+// });
+var logger = fs.createWriteStream('nodesetup_output.txt', {
+  flags: 'a' // 'a' means appending (old data will be preserved)
 });
+logger.write(contractInstance.address+'\n');
+web3.eth.accounts.map(function(x){
+logger.write(x+'\n');
+});
+logger.end();
 	prompt.start();
 	prompt.get(['Enter to quit'], function (err, result) {
 		console.log('Finished');

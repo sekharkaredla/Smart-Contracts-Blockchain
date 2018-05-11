@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 session_start();
 if(!$_SESSION['user']){
-  header('Location:index.html');
+  header('Location:index.php');
   die();
 }
 $fileContents = file_get_contents("https://s3.ap-south-1.amazonaws.com/smart-contracts-blockchain/candidate_".$_SESSION['event_id'].".json");

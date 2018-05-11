@@ -20,7 +20,7 @@
 	<title>Voting App</title>
 </head>
 
-<body class="container-fluid" style="background: linear-gradient(to right, #de6161, #2657eb); padding: 2em">
+<body class="container-fluid" style="background: linear-gradient(to right, #de6161, #2657eb); padding: 2em;">
 	<div style="margin-top: 1%">
 		<div class="paper">
 			<center>

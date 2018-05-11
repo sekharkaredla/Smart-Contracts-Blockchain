@@ -100,9 +100,9 @@ die();
     <title>Admin Page</title>
 </head>
 
-<body style="  background: linear-gradient(to right, #56ccf2, #2f80ed);">
+<body style="background: linear-gradient(to right, #de6161, #2657eb);">
     <div class="container">
-        <div class="paper" style="margin-top: 10%; ">
+        <div class="paper" style="margin-top: 10%; padding: 2em;">
             <center>
                 <h3>Admin</h3>
             </center>
@@ -121,7 +121,7 @@ die();
                     <input type="textarea" class="form-control myinput1" name="candidate_names" id="cnid" placeholder="Enter candidate names"
                         required/>
                 </div>
-                <input type="submit" class="btn btn-outline-dark btn-lg btn-block mybutton1" value="Submit" name="SubmitButton" />
+                <input type="submit" style="margin-top: 3em" class="btn btn-primary btn-lg btn-block mybutton2" value="Submit" name="SubmitButton" />
             </form>
         </div>
     </div>

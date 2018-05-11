@@ -20,7 +20,7 @@ compiledCode = solc.compile(code);
 abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface);
 VotingContract = web3.eth.contract(abiDefinition);
 byteCode = compiledCode.contracts[':Voting'].bytecode;
-deployedContract = VotingContract.new(candidate_data['candidateDetails']['candidates'],web3.eth.accounts,{data: byteCode, from: web3.eth.accounts[0], gas: 3500000});
+deployedContract = VotingContract.new(candidate_data['candidateDetails']['candidates'],web3.eth.accounts,{data: byteCode, from: web3.eth.accounts[0], gas: 14200000});
 setTimeout(function(){
 	contractInstance = VotingContract.at(deployedContract.address);
 	obj = {'contract':contractInstance.address};
@@ -34,10 +34,6 @@ setTimeout(function(){
 //
 //     console.log("nodesetup_output saved!");
 // });
-fs.unlink('nodesetup_output.txt', (err) => {
-  if (err) throw err;
-  console.log('successfully deleted');
-});
 var logger = fs.createWriteStream('nodesetup_output.txt', {
   flags: 'a' // 'a' means appending (old data will be preserved)
 });

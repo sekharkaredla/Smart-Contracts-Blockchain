@@ -22,6 +22,7 @@ function voteForCandidate() {
 .then(function(data) {
   candidate_list = data_candidate.candidateDetails.candidates;
   candidateName = $("#candidate").val();
+	console.log(candidateName);
   voterHash = $("#voterHash").val();
   var temp = candidate_list.indexOf(candidateName);
   temp = temp +1;

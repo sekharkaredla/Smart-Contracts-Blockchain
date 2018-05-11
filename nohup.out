@@ -1,0 +1,116 @@
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id75.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name       │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli    │ 0  │ fork │ 23000 │ online │ 0       │ 48s    │ 0%  │ 169.5 MB   │ ubuntu │ disabled │
+│ nodesetup_id75 │ 1  │ fork │ 23093 │ online │ 0       │ 0s     │ 0%  │ 16.1 MB    │ ubuntu │ disabled │
+└────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id75.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name       │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli    │ 0  │ fork │ 23247 │ online │ 0       │ 45s    │ 0%  │ 170.2 MB   │ ubuntu │ disabled │
+│ nodesetup_id75 │ 1  │ fork │ 23282 │ online │ 0       │ 0s     │ 0%  │ 12.1 MB    │ ubuntu │ disabled │
+└────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id75.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name       │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli    │ 0  │ fork │ 27739 │ online │ 0       │ 73s    │ 0%  │ 169.0 MB   │ ubuntu │ disabled │
+│ nodesetup_id75 │ 1  │ fork │ 27830 │ online │ 0       │ 0s     │ 0%  │ 15.8 MB    │ ubuntu │ disabled │
+└────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id75.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name       │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli    │ 0  │ fork │ 28951 │ online │ 0       │ 44s    │ 0%  │ 277.4 MB   │ ubuntu │ disabled │
+│ nodesetup_id75 │ 1  │ fork │ 29042 │ online │ 0       │ 0s     │ 0%  │ 12.2 MB    │ ubuntu │ disabled │
+└────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id75.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name       │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli    │ 0  │ fork │ 29688 │ online │ 0       │ 34s    │ 0%  │ 268.7 MB   │ ubuntu │ disabled │
+│ nodesetup_id75 │ 1  │ fork │ 29810 │ online │ 0       │ 0s     │ 0%  │ 12.1 MB    │ ubuntu │ disabled │
+└────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id75.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name       │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli    │ 0  │ fork │ 31333 │ online │ 0       │ 17s    │ 0%  │ 248.3 MB   │ ubuntu │ disabled │
+│ nodesetup_id75 │ 1  │ fork │ 31378 │ online │ 0       │ 0s     │ 0%  │ 12.1 MB    │ ubuntu │ disabled │
+└────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id100.js in fork_mode (1 instance)
+[PM2] Done.
+┌─────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name        │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├─────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli     │ 0  │ fork │ 31712 │ online │ 0       │ 25s    │ 0%  │ 251.5 MB   │ ubuntu │ disabled │
+│ nodesetup_id100 │ 1  │ fork │ 31775 │ online │ 0       │ 0s     │ 0%  │ 12.1 MB    │ ubuntu │ disabled │
+└─────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id120.js in fork_mode (1 instance)
+[PM2] Done.
+┌─────────────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name        │ id │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├─────────────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli     │ 0  │ fork │ 1486 │ online │ 0       │ 52s    │ 0%  │ 253.5 MB   │ ubuntu │ disabled │
+│ nodesetup_id120 │ 1  │ fork │ 1567 │ online │ 0       │ 0s     │ 0%  │ 12.1 MB    │ ubuntu │ disabled │
+└─────────────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id120.js in fork_mode (1 instance)
+[PM2] Done.
+┌─────────────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────┬───────────┬────────┬──────────┐
+│ App name        │ id │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem       │ user   │ watching │
+├─────────────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────┼───────────┼────────┼──────────┤
+│ nodesetup_id120 │ 0  │ fork │ 2652 │ online │ 0       │ 0s     │ 0%  │ 12.1 MB   │ ubuntu │ disabled │
+└─────────────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────┴───────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id120.js in fork_mode (1 instance)
+[PM2] Done.
+┌─────────────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name        │ id │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├─────────────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli     │ 0  │ fork │ 4800 │ online │ 0       │ 13s    │ 0%  │ 247.3 MB   │ ubuntu │ disabled │
+│ nodesetup_id120 │ 1  │ fork │ 4853 │ online │ 0       │ 0s     │ 0%  │ 7.7 MB     │ ubuntu │ disabled │
+└─────────────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id120.js in fork_mode (1 instance)
+[PM2] Done.
+┌─────────────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name        │ id │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├─────────────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli     │ 0  │ fork │ 5132 │ online │ 0       │ 32s    │ 0%  │ 254.6 MB   │ ubuntu │ disabled │
+│ nodesetup_id120 │ 1  │ fork │ 5213 │ online │ 0       │ 0s     │ 0%  │ 12.1 MB    │ ubuntu │ disabled │
+└─────────────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id120.js in fork_mode (1 instance)
+[PM2] Done.
+┌─────────────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name        │ id │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├─────────────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli     │ 0  │ fork │ 5415 │ online │ 0       │ 83s    │ 0%  │ 172.9 MB   │ ubuntu │ disabled │
+│ nodesetup_id120 │ 1  │ fork │ 5524 │ online │ 0       │ 0s     │ 0%  │ 12.1 MB    │ ubuntu │ disabled │
+└─────────────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/ubuntu/smart-contracts-blockchain/nodesetup_id120.js in fork_mode (1 instance)
+[PM2] Done.
+┌─────────────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────┬────────────┬────────┬──────────┐
+│ App name        │ id │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem        │ user   │ watching │
+├─────────────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────┼────────────┼────────┼──────────┤
+│ ganache-cli     │ 0  │ fork │ 5836 │ online │ 0       │ 71s    │ 0%  │ 171.9 MB   │ ubuntu │ disabled │
+│ nodesetup_id120 │ 1  │ fork │ 5945 │ online │ 0       │ 0s     │ 0%  │ 7.7 MB     │ ubuntu │ disabled │
+└─────────────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────┴────────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app

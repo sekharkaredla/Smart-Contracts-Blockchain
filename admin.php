@@ -14,7 +14,7 @@ $adminpass = $_POST['adminpass'];
 if($adminid != 'admin' || md5($adminpass) != '21232f297a57a5a743894a0e4a801fc3')
 {
   session_destroy();
-  header('Location:index.html');
+  header('Location:index.php');
   die();
 }
 }
@@ -77,7 +77,7 @@ try {
 } catch (S3Exception $e) {
     echo $e->getMessage() . PHP_EOL;
 }
-  header('Location:index.html');
+  header('Location:index.php');
 // $myfile = fopen("voter_event.txt", "w");
 // fwrite($myfile,$event_id);
 // fclose($myfile);

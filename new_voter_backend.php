@@ -21,10 +21,7 @@ if ($conn->query($sql2) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
-
-
-
-
 $conn->close();
+header('Location:index.php');
+die();
 ?>

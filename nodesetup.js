@@ -20,7 +20,7 @@ compiledCode = solc.compile(code);
 abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface);
 VotingContract = web3.eth.contract(abiDefinition);
 byteCode = compiledCode.contracts[':Voting'].bytecode;
-deployedContract = VotingContract.new(candidate_data['candidateDetails']['candidates'],web3.eth.accounts,{data: byteCode, from: web3.eth.accounts[0], gas: 2900000});
+deployedContract = VotingContract.new(candidate_data['candidateDetails']['candidates'],web3.eth.accounts,{data: byteCode, from: web3.eth.accounts[0], gas: 4000000});
 setTimeout(function(){
 	contractInstance = VotingContract.at(deployedContract.address);
 	obj = {'contract':contractInstance.address};

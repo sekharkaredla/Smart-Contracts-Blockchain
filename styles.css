@@ -13,6 +13,11 @@
   border-radius: 300px;
   background-color: #e0e0e0;
 }
+
+.myinput3 {
+  border-radius: 300px;
+}
+
 .mybutton1 {
   border-radius: 300px;
   background: linear-gradient(to right, #56ccf2, #2f80ed);

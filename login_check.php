@@ -38,13 +38,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
     else{
       session_destroy();
-      header('Location:index.html');
+      header('Location:index.php');
       die();
     }
   }
   else{
     session_destroy();
-    header('Location:index.html');
+    header('Location:index.php');
     die();
   }
 }

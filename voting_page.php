@@ -68,8 +68,8 @@ $candidateLength = $json['candidateDetails']['candidateLength'];
         <div class="row">
           <div class="form-group col s6">
           <label for="candidate">Candidate Name</label>
-            <!-- <input id="candidate" type="text" class="form-control myinput3" placeholder="Enter Candidate Name"> -->
-            <select class="form-control myinput">
+            <input id="candidate" type="text" class="form-control myinput3" placeholder="Enter Candidate Name">
+            <!-- <select class="form-control myinput">
               <?php
                 for($temp=0;$temp<$candidateLength;$temp++)
                 {
@@ -77,7 +77,7 @@ $candidateLength = $json['candidateDetails']['candidateLength'];
                   echo"<option class=\"options\" id=\"candidate\" value=\"candidate-".$temp2."\" >".$candidateList[$temp]."</option>";
                 }
             ?>
-            </select>
+            </select> -->
           </div>
           <div class="form-group col s6">
           <label for="voterHash">Voter Hash(Self Generated)</label>

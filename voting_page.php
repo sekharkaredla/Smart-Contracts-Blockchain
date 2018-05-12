@@ -74,7 +74,7 @@ $candidateLength = $json['candidateDetails']['candidateLength'];
                 for($temp=0;$temp<$candidateLength;$temp++)
                 {
                   $temp2 = $temp +1;
-                  echo"<option class=\"options\" id=\"candidate\" value=\"candidate-".$temp2."\" >".$candidateList[$temp]."</option>"; 
+                  echo"<option class=\"options\" id=\"candidate\" value=\"candidate-".$temp2."\" >".$candidateList[$temp]."</option>";
                 }
             ?>
             </select>
@@ -83,12 +83,12 @@ $candidateLength = $json['candidateDetails']['candidateLength'];
           <label for="voterHash">Voter Hash(Self Generated)</label>
             <input id="voterHash" type="text" class="form-control myinput3" value="<?php echo htmlspecialchars($_SESSION['voter_hash']); ?>">
           </div>
-          
+
           <!-- <center>
             <a class="waves-effect waves-light btn" onclick="voteForCandidate()">Vote</a>
           </center> -->
           <input type="button" class="btn btn-primary btn-lg btn-block mybutton2" value="Vote" onclick="voteForCandidate()"/>
-        
+
         </div>
       </form>
     </div>
@@ -96,8 +96,7 @@ $candidateLength = $json['candidateDetails']['candidateLength'];
   </div>
 </body>
 <script src="./web3.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-<script src="./voting.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="./voting2.js"></script>
 
 </html>
-

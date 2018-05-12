@@ -22,9 +22,9 @@ contract Voting {
   */
   function Voting(bytes32[] candidateNames,bytes32[] voterNames) public {
     candidateList = candidateNames;
-    for(uint i=0 ;i<voterNames.length;i++){
+    /*for(uint i=0 ;i<voterNames.length;i++){
     voters[voterNames[i]] = true;
-    }
+    }*/
   }
 
   // This function returns the total votes a candidate has received so far
@@ -40,9 +40,9 @@ contract Voting {
   // is equivalent to casting a vote
   function voteForCandidate(bytes32 candidate , bytes32 voterHash) public {
     require(validCandidate(candidate));
-    require(validVoter(voterHash));
+    // require(validVoter(voterHash));
     votesReceived[candidate] += 1;
-    setVoted(voterHash);
+    // setVoted(voterHash);
   }
 
   function validCandidate(bytes32 candidate) view public returns (bool) {

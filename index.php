@@ -111,6 +111,10 @@
 									<input type="Password" class="form-control myinput" name="password" id="pidr" placeholder="Enter password" required>
 								</div>
 								<div class="form-group">
+									<!-- <label for="pidr">Password</label> -->
+									<input type="text" class="form-control myinput" name="voter_hash" id="pidr" placeholder="Enter Secret Voter Hash" required>
+								</div>
+								<div class="form-group">
 									<!-- <label for="ename">Event Name</label> -->
 									<select name="eventlist" class="form-control myinput" style="height: 3em" id="el" >
 									<?php

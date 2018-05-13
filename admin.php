@@ -120,34 +120,9 @@ die();
 	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Admin Page</title>
-    <script>
-        function display(id){
-            console.log("onclck", id);
-            var chart = new CanvasJS.Chart("mcontent", {
-                animationEnabled: true,
-                title: {
-                    text: "Event: " + id
-                },
-                data: [{
-                    type: "pie",
-                    startAngle: 240,
-                    yValueFormatString: "##0.00\"%\"",
-                    indexLabel: "{label} {y}",
-                    dataPoints: [
-                        {y: 79.45, label: "Aijaaz"},
-                        {y: 7.31, label: "Sekhar"},
-                        {y: 7.06, label: "Pranith"},
-                        {y: 4.91, label: "Alekhya"},
-                        {y: 1.26, label: "Others"}
-                    ]
-                }]
-            });
-            chart.render();
-            $('#myModal').modal();
-            }
-    </script>
 </head>
-
+<script src="chartGeneration.js">
+</script>
 <body style="background: linear-gradient(to right, #de6161, #2657eb);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Dashboard</a>
@@ -219,7 +194,7 @@ die();
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     echo"<tr>";
-                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_name'].'\')">more</button></div></td>'; 
+                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">more</button></div></td>'; 
                                     echo"</tr>";
                                 }
                             }
@@ -253,4 +228,6 @@ die();
     </script>
 </body>
 <!-- <script src="./votes.js"></script> -->
+<script src="./web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </html>

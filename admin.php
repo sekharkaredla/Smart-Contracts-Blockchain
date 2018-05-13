@@ -114,7 +114,7 @@ die();
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
 	 crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./styles.css">
-
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
@@ -123,8 +123,28 @@ die();
     <script>
         function display(id){
             console.log("onclck", id);
-            
-        }
+            var chart = new CanvasJS.Chart("mcontent", {
+                animationEnabled: true,
+                title: {
+                    text: "Event: " + id
+                },
+                data: [{
+                    type: "pie",
+                    startAngle: 240,
+                    yValueFormatString: "##0.00\"%\"",
+                    indexLabel: "{label} {y}",
+                    dataPoints: [
+                        {y: 79.45, label: "Aijaaz"},
+                        {y: 7.31, label: "Sekhar"},
+                        {y: 7.06, label: "Pranith"},
+                        {y: 4.91, label: "Alekhya"},
+                        {y: 1.26, label: "Others"}
+                    ]
+                }]
+            });
+            chart.render();
+            $('#myModal').modal();
+            }
     </script>
 </head>
 
@@ -199,7 +219,7 @@ die();
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     echo"<tr>";
-                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary" onclick="display(\''.$row['event_name'].'\')">more</button></div></td>'; 
+                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_name'].'\')">more</button></div></td>'; 
                                     echo"</tr>";
                                 }
                             }
@@ -213,12 +233,12 @@ die();
     <div class="menu-content container" id="misc"> 
         Misc
     </div>
-    <!-- <div class="modal" tabindex="-1" role="dialog" id="myModal">
-        <div class="modal-dialog" role="document">
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" style="padding: 1em" role="document">
             <div class="modal-content" id="mcontent">
             </div>
         </div>
-    </div> -->
+    </div>
     <script>
         var $content = $('.menu-content');
         function showContent(selector) {
@@ -232,5 +252,5 @@ die();
         showContent("#create_event");
     </script>
 </body>
-<script src="./votes.js"></script>
+<!-- <script src="./votes.js"></script> -->
 </html>

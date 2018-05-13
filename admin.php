@@ -111,7 +111,12 @@ die();
 	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Admin Page</title>
-    
+    <script>
+        function display(id){
+            console.log("onclck", id);
+            
+        }
+    </script>
 </head>
 
 <body style="background: linear-gradient(to right, #de6161, #2657eb);">
@@ -185,7 +190,7 @@ die();
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     echo"<tr>";
-                                    echo'<td><div><p>'.$row['event_name'].'</p>'.display($row['event_name']).'</div></td>'; 
+                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary" onclick="display(\''.$row['event_name'].'\')">more</button></div></td>'; 
                                     echo"</tr>";
                                 }
                             }
@@ -199,12 +204,12 @@ die();
     <div class="menu-content container" id="misc"> 
         Misc
     </div>
-    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <!-- <div class="modal" tabindex="-1" role="dialog" id="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content" id="mcontent">
             </div>
         </div>
-    </div>
+    </div> -->
     <script>
         var $content = $('.menu-content');
         function showContent(selector) {

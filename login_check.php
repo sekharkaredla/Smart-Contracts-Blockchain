@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
       $sql = "select voted from event_details_".$row['event_id']." where username='".$user."'";
       $result3=$conn->query($sql);
       $voted_row=$result3->fetch_assoc();
-      if($voted_row['voted']==true)
+      if($voted_row['voted']==1)
       {
         alert('you have already voted');
         header('Location:index.php');

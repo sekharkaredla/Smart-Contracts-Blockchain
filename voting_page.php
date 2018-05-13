@@ -4,6 +4,26 @@ session_start();
 if(!$_SESSION['user']){
   header('Location:index.php');
   die();
+  if(isset($_POST["submit"])){
+    $servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
+    $username='uopAdmin123';
+    $password='pandu123';
+    $database='voterdb';
+    $conn=new mysqli($servername,$username,$password,$database);
+      if($conn->connect_error){
+      session_destroy();
+      die('connection failed '.$conn->$connect_error);
+    }
+    $sql = 'update event_details_'+$_SESSION['event_id']+' set voted=1 where username='+$_SESSION['user']+';';
+    echo $sql;
+    if ($conn->query($sql) === FALSE) {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+      die();
+    }
+    else{
+      echo "User voted<br/>";
+    }
+  };
 }
 $fileContents = file_get_contents("https://s3.ap-south-1.amazonaws.com/smart-contracts-blockchain/candidate_".$_SESSION['event_id'].".json");
 $json = json_decode($fileContents, true);

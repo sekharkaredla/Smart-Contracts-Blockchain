@@ -4,6 +4,7 @@ session_start();
 if(!$_SESSION['user']){
   header('Location:index.php');
   die();
+  };
   if(isset($_POST["submit"])){
     $servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
     $username='uopAdmin123';
@@ -23,7 +24,6 @@ if(!$_SESSION['user']){
     else{
       echo "User voted<br/>";
     }
-  };
 }
 $fileContents = file_get_contents("https://s3.ap-south-1.amazonaws.com/smart-contracts-blockchain/candidate_".$_SESSION['event_id'].".json");
 $json = json_decode($fileContents, true);

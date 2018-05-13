@@ -87,21 +87,55 @@ try {
 // $out = shell_exec('/usr/local/bin/pm2 start /Users/roshni/Desktop/JPMC_Project/smart-contracts-blockchain/notesetup.js -- '.$event_id);
 // echo $out;
 die();
-}
+};
 ?>
+        
+
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css">
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+	 crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./styles.css">
+
+
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Admin Page</title>
+    
 </head>
 
 <body style="background: linear-gradient(to right, #de6161, #2657eb);">
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="menu navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="menu-btn nav-link" href="#create_event">Create Event</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menu-btn nav-link" href="#all_events">All Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menu-btn nav-link" href="#misc">Misc</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="menu-content container" id="create_event">
         <div class="paper" style="margin-top: 10%; padding: 2em;">
             <center>
                 <h3>Admin</h3>
@@ -125,6 +159,64 @@ die();
             </form>
         </div>
     </div>
+    <div class="menu-content container" id="all_events"> 
+        <div class="paper" style="margin-top: 1em">
+            <div class="table-responsive">
+                <center>
+                    <h4>List of all Events</h4>
+                </center>
+                <table class="table table-striped">
+                    <tbody>
+                        <?php
+                            $servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
+                            $username='uopAdmin123';
+                            $password='pandu123';
+                            $database='voterdb';
+                            $conn = new mysqli($servername, $username, $password, $database);
+                            if ($conn->connect_error) 
+                            {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+                            $sql="select * from event_details";
+                            $result = $conn->query($sql);
+                            function display($x){
+                                return "$x";
+                            }
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    echo"<tr>";
+                                    echo'<td><div><p>'.$row['event_name'].'</p>'.display($row['event_name']).'</div></td>'; 
+                                    echo"</tr>";
+                                }
+                            }
+                            $conn->close();
+                        ?>
+                    </tbody>
+                </table>  
+            </div>
+        </div>
+    </div>
+    <div class="menu-content container" id="misc"> 
+        Misc
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="mcontent">
+            </div>
+        </div>
+    </div>
+    <script>
+        var $content = $('.menu-content');
+        function showContent(selector) {
+            $content.hide();
+            $(selector).show();
+        }
+        $('.menu').on('click', '.menu-btn', function(e) {
+            showContent(e.currentTarget.hash);
+            e.preventDefault();
+        });
+        showContent("#create_event");
+    </script>
 </body>
-
+<script src="./votes.js"></script>
 </html>

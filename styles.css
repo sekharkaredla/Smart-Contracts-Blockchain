@@ -72,3 +72,8 @@ body {
 .options {
   border-radius: 300px;
 }
+
+.rowstyle {
+  padding: 2em;
+  box-shadow: 0px 0px 100px 5px rgb(46, 46, 46);
+}

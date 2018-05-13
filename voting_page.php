@@ -52,6 +52,7 @@ $candidateLength = $json['candidateDetails']['candidateLength'];
 
 <body class="container" style="background: linear-gradient(to right, #de6161, #2657eb); padding: 2em; margin-top: 1%;">
   <input type="hidden" id="event_id" value = "<?php echo $_SESSION['event_id'] ?>"/>
+  <input type="hidden" id="voter_hash" value = "<?php echo $_SESSION['voter_hash'] ?>"/>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <div class="paper">

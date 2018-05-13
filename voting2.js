@@ -5,6 +5,7 @@ abi = JSON.parse(
 );
 VotingContract = web3.eth.contract(abi);
 event_id = document.getElementById("event_id").value;
+var voter_hash = document.getElementById("voter_hash").value;
 var candidates = {};
 var contractAddress = "";
 const url_contract =
@@ -68,7 +69,7 @@ console.log(contractAddress);
 function voteForCandidate() {
   candidateName = $("#candidate").val();
   voterHash = $("#voterHash").val();
-  contractInstance.voteForCandidate(candidateName, voterHash,{from: web3.eth.accounts[0]}, function() {
+  contractInstance.voteForCandidate(candidateName, voterHash,{from: voter_hash}, function() {
     let div_id = candidates[candidateName];
     $("#" + div_id).html(contractInstance.totalVotesFor.call(candidateName).toString());
   });

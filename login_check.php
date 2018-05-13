@@ -33,6 +33,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
       $event_row=$result2->fetch_assoc();
       $_SESSION['event_id']=$row['event_id'];
       $_SESSION['event_name']=$event_row['event_name'];
+      $sql = "select voted from event_details_".$row['event_id']." where username='".$user."'";
+      $result3=$conn->query($sql);
+      $voted_row=$result3->fetch_assoc();
+      if($voted_row['voted']==true)
+      {
+        alert('you have already voted');
+        header('Location:index.php');
+        session_destroy();
+        die();
+      }
       header('Location:voting_page.php');
       die();
     }

@@ -39,6 +39,15 @@ else{
   else{
     echo "Event Details pushed into database<br/>";
   }
+  $sql = 'create table event_details_'+$event_id+' (username varchar(30),voted boolean);';
+  echo $sql;
+  if ($conn->query($sql) === FALSE) {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    die();
+  }
+  else{
+    echo "Table created<br/>";
+  }
 $candiateNames = $_POST['candidate_names'];
 // print_r(explode(" ",$candiateNames));
 // print_r(count(explode(" ",$candiateNames)));

@@ -38,8 +38,12 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
       $voted_row=$result3->fetch_assoc();
       if($voted_row['voted']==1)
       {
+        echo "<script>
         alert('you have already voted');
-        header('Location:index.php');
+        window.location.href='index.php';
+        </script>";
+        // alert('you have already voted');
+        // header('Location:index.php');
         session_destroy();
         die();
       }

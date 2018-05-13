@@ -65,14 +65,19 @@ contractInstance = VotingContract.at(
 );
 console.log(candidates);
 console.log(contractAddress);
+function completeVote(){
+  window.location = "votingDone.php";
+}
 
 function voteForCandidate() {
+  document.getElementById('vote_button').setAttribute("disabled","disabled");
   candidateName = $("#candidate").val();
   voterHash = $("#voterHash").val();
   contractInstance.voteForCandidate(candidateName, voterHash,{from: voter_hash}, function() {
     let div_id = candidates[candidateName];
     $("#" + div_id).html(contractInstance.totalVotesFor.call(candidateName).toString());
   });
+  setTimeout(completeVote,2000);
 }
 
 $(document).ready(function() {

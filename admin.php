@@ -39,10 +39,10 @@ else{
   else{
     echo "Event Details pushed into database<br/>";
   }
-  $sql = 'create table event_details_'+$event_id+' (username varchar(30),voted boolean);';
-  echo $sql;
-  if ($conn->query($sql) === FALSE) {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+  $sql2 = 'create table event_details_'.$event_id.' (username varchar(30),voted boolean);';
+  echo $sql2;
+  if ($conn->query($sql2) === FALSE) {
+    echo "Error: " . $sql2 . "<br>" . $conn->error;
     die();
   }
   else{

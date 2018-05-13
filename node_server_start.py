@@ -15,7 +15,7 @@ while True:
 	result = cursor.fetchall()
 	cursor.close()
 	if len(result) == 0:
-		time.sleep(5)
+		time.sleep(10)
 		continue
 	for each_row in result:
 		copyfile('./nodesetup.js', './nodesetup_'+each_row[0]+'.js')
@@ -25,4 +25,4 @@ while True:
 		cursor.close()
 		cnx.commit()
 	print datetime.datetime.now()
-	time.sleep(5)
+	time.sleep(10)

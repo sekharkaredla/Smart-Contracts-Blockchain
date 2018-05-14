@@ -162,6 +162,7 @@
 			</div>
 		</div>
 	</div>
+	<marquee><b>Contact US at Toll Free Number-1800111950 and Email ID-voting@gmail.com</b></marquee>
 </body>
 
 </html>

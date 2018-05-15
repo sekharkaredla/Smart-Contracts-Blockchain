@@ -19,7 +19,7 @@ while True:
 		continue
 	for each_row in result:
 		os.system("rm ./nodesetup_"+each_row[0]+".js")
-		os.system('pm2 delete nodesetup_'+each_row[0]+'.js')
+		os.system('pm2 delete nodesetup_'+each_row[0])
 		cursor = cnx.cursor()
 		cursor.execute('update event_details set running=false where event_id="'+each_row[0]+'"')
 		cursor.close()

@@ -30,7 +30,7 @@ else{
   }
   $event_id = $_POST['event_id'];
   $event_name = $_POST['event_name'];
-  $sql = 'insert into event_details values("'.$event_id.'","'.$event_name.'",'."1".');';
+  $sql = 'insert into event_details values("'.$event_id.'","'.$event_name.'",'."1".',false);';
   echo $sql;
   if ($conn->query($sql) === FALSE) {
     echo "Error: " . $sql . "<br>" . $conn->error;

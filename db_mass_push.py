@@ -13,9 +13,9 @@ for account in f.readlines():
 	print query1
 	cursor1.execute(query1)
 	cursor1.close()
-	cursor2 = cnx.cursor()
-	query2 = ('insert into event_details_id100 values("testuser_'+str(count)+'",false);')
-	cursor2.execute(query2)
-	cursor2.close()
+	#cursor2 = cnx.cursor()
+	#query2 = ('insert into event_details_id100 values("testuser_'+str(count)+'",false);')
+	#cursor2.execute(query2)
+	#cursor2.close()
 	count+=1
 cnx.commit()

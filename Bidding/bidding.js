@@ -11,34 +11,37 @@ const url_contract =
   ".json";
 
 function getContract(handle) {
-          $.ajax({
-            type: 'GET',
-            url: url_contract,
-            async: false,
-            contentType: "application/json",
-            dataType: 'json',
-            success: function (json) {
-                handle(json);
-            },
-            error: function (e) {
-                alert("error");
-            }
-        });
+  $.ajax({
+    type: "GET",
+    url: url_contract,
+    async: false,
+    contentType: "application/json",
+    dataType: "json",
+    success: function(json) {
+      handle(json);
+    },
+    error: function(e) {
+      alert("error");
     }
+  });
+}
 
-getContract(function(data){
+getContract(function(data) {
   contractAddress = data.contract;
 });
-contractInstance = VotingContract.at(
-  contractAddress
-);
+contractInstance = VotingContract.at(contractAddress);
 console.log(contractAddress);
 
 function placeBid(event_id) {
-//  document.getElementById('vote_button').setAttribute("disabled","disabled");
+  //  document.getElementById('vote_button').setAttribute("disabled","disabled");
   bidderHash = $("#bidderHash").val();
-  bidAmount = $("#"+event_id+"_bid").val();
-  contractInstance.placeBid(bidderHash,bidAmount,{from: bidderHash}, function() {
-    console.log("bid placed");
-  });
+  bidAmount = $("#" + event_id + "_bid").val();
+  contractInstance.placeBid(
+    bidderHash,
+    bidAmount,
+    { from: bidderHash },
+    function() {
+      console.log("bid placed");
+    }
+  );
 }

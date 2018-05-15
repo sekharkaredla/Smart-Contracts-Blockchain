@@ -1,4 +1,3 @@
-<?php $x = ""; ?>
 <html>
 <head>
   <title>Bidding System CBIT</title>
@@ -21,10 +20,44 @@
 
 <body class="container" style="background: linear-gradient(to right, #de6161, #2657eb); padding: 2em; margin-top: 1%;">
   <div>
-      hi
+    <div class="paper" style="margin-top: 1em">
+        <div class="table-responsive">
+            <center>
+                <h4>List of all Events</h4>
+            </center>
+            <table class="table table-striped">
+                <tbody>
+                    <?php
+                        $servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
+                        $username='uopAdmin123';
+                        $password='pandu123';
+                        $database='bidDB';
+                        $conn = new mysqli($servername, $username, $password, $database);
+                        if ($conn->connect_error) 
+                        {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
+                        $sql="select * from event_details";
+                        $result = $conn->query($sql);
+                        function display($x){
+                            return "$x";
+                        }
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo"<tr>";
+                                echo'<td><div><p>'.$row['event_name'].'</p><p>'.$row['event_price'].'</p><input type="number" id="'.$row['event_id'].'_bid" /><button class="btn btn-primary mybutton2" style="float: right;" onclick="placeBid(\''.$row['event_id'].'\')">Bid</button></div></td>';
+                                echo"</tr>";
+                            }
+                        }
+                        $conn->close();
+                    ?>
+                </tbody>
+            </table>  
+        </div>
+    </div>
   </div>
 </body>
-<script src="./web3.js"></script>
+<script src="../web3.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
+<script src="./bidding.js"></script>
 </html>

@@ -19,31 +19,33 @@ contract Bidding {
   deploy the contract to the blockchain. When we deploy the contract,
   we will pass an array of candidates who will be contesting in the election
   */
-  /*function Bidding(bytes32[] bidderNames) public {
-    bidderList = bidderNames;
-  }*/
+  function Bidding(bytes32[] bidderNames) public {
+    for(uint8 i =0 ;i<bidderNames.length;i++){
+    bidsReceived[bidderNames[i]] = 0;
+    }
+  }
 
   // This function returns the total votes a candidate has received so far
-  function totalBidBy(bytes32 bidder) view public returns (uint8) {
-    require(validBidder(bidder));
+  function totalBidBy(bytes32 bidder) view public returns (uint32) {
+    // require(validBidder(bidder));
     return bidsReceived[bidder];
   }
 
   // This function increments the vote count for the specified candidate. This
   // is equivalent to casting a vote
   function placeBid(bytes32 bidder,uint32 bid) public {
-    require(validBidder(bidder));
+    // require(validBidder(bidder));
     // require(validVoter(voterHash));
-    bidReceived[candidate] = bid;
+    bidsReceived[bidder] = bid;
     // setVoted(voterHash);
   }
 
-  function validBidder(bytes32 bidder) view public returns (bool) {
+  /*function validBidder(bytes32 bidder) view public returns (bool) {
     for(uint i = 0; i < bidderList.length; i++) {
       if (bidderList[i] == bidder) {
         return true;
       }
     }
     return false;
-  }
+  }*/
 }

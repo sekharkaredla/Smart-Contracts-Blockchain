@@ -12,6 +12,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
 	 crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./styles.css">
+
+
 	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -22,12 +24,12 @@
 	<div style="margin-top: 1%">
 		<div class="paper">
 			<center>
-				<h2 style="color: #000; margin-top: 1em">Voters Login to Access Distributed Services</h2>
+				<h2 style="color: #000; margin-top: 1em">Bidding Login to Access Distributed Services</h2>
 			</center>
 			<div class="row" id="logins" style="padding: 8em">
 				<div class="col-sm">
-					<img src="./user.png" style="height: 16em;" id="userpic" />
-					<img src="./admin.png" style="height: 16em; display: none;" id="adminpic" />
+					<img src="../user.png" style="height: 16em;" id="userpic" />
+					<img src="../admin.png" style="height: 16em; display: none;" id="adminpic" />
 				</div>
 				<div class="col-sm">
 					<div style="margin: 1em">
@@ -91,7 +93,7 @@
 			<div id="register" style="display: none; padding: 8em">
 				<div class="row">
 					<div class="col-sm">
-						<img src="./register.png" style="height: 16em;"/>
+						<img src="../register.png" style="height: 16em;"/>
 					</div>
 					<div class="col-sm">
 						<div>

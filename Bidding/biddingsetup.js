@@ -1,0 +1,45 @@
+Web3 = require('web3');
+require('dotenv').config();
+const AWS = require('aws-sdk');
+
+const s3 = new AWS.S3({
+    accessKeyId: process.env.AWS_ACCESS_KEY,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+});
+
+const request = require('request');
+
+var fs = require("fs");
+var prompt = require('prompt');
+web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+console.log(web3.eth.accounts);
+code = fs.readFileSync('Bidding.sol');
+solc = require('solc');
+compiledCode = solc.compile(code);
+abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface);
+VotingContract = web3.eth.contract(abiDefinition);
+byteCode = compiledCode.contracts[':Voting'].bytecode;
+deployedContract = VotingContract.new({data: byteCode, from: web3.eth.accounts[0], gas: 4700000});
+setTimeout(function(){
+contractInstance = VotingContract.at(deployedContract.address);
+obj = {'contract':contractInstance.address};
+s3.putObject({Bucket: 'bidding-system',Key: 'contract_'+process.argv[2]+'.json',Body: JSON.stringify(obj),ACL:'public-read' ,ContentType: "application/json"},function(err,data){console.log(JSON.stringify(err));});
+console.log("contractInstance address:" + contractInstance.address);
+	var fs = require('fs');
+fs.unlink('bidding_setup.txt', (err) => {
+  if (err) throw err;
+  console.log('successfully deleted');
+});
+var logger = fs.createWriteStream('nodesetup_output.txt', {
+  flags: 'a' // 'a' means appending (old data will be preserved)
+});
+logger.write(contractInstance.address+'\n');
+web3.eth.accounts.map(function(x){
+logger.write(x+'\n');
+});
+logger.end();
+	prompt.start();
+	prompt.get(['Enter to quit'], function (err, result) {
+		console.log('Finished');
+	});
+},5000);

@@ -13,15 +13,15 @@ contract Bidding {
   We will use an array of bytes32 instead to store the list of candidates
   */
 
-  bytes32[] public bidderList;
+  // bytes32[] public bidderList;
 
   /* This is the constructor which will be called once when you
   deploy the contract to the blockchain. When we deploy the contract,
   we will pass an array of candidates who will be contesting in the election
   */
-  function Bidding(bytes32[] bidderNames) public {
+  /*function Bidding(bytes32[] bidderNames) public {
     bidderList = bidderNames;
-  }
+  }*/
 
   // This function returns the total votes a candidate has received so far
   function totalBidBy(bytes32 bidder) view public returns (uint8) {

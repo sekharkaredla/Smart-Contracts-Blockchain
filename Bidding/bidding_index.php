@@ -116,29 +116,6 @@
 								</div>
 								<div class="form-group">
 									<!-- <label for="ename">Event Name</label> -->
-									<select name="eventlist" class="form-control myinput" style="height: 3em" id="el" >
-									<?php
-										$servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
-										$username='uopAdmin123';
-										$password='pandu123';
-										$database='bidDB';
-										$conn = new mysqli($servername, $username, $password, $database);
-										if ($conn->connect_error) 
-										{
-											die("Connection failed: " . $conn->connect_error);
-										}
-										$sql="select * from event_details";
-										$result = $conn->query($sql);
-
-											if ($result->num_rows > 0) {
-											// output data of each row
-											while($row = $result->fetch_assoc()) {
-												echo"<option class=\"options\" value=".$row['event_id'].">".$row['event_name']."</option>"; 
-											}}
-											$conn->close();
-										?>
-										
-									</select>
 								</div>
 								<input type="submit" class="btn btn-primary btn-lg btn-block mybutton" name="register" value="Register" />
 								<center>

@@ -25,7 +25,7 @@
 		<div style="display: inline-flex;">
 			<div class="minipaper" onclick="location.href = './voting_index.php';">
 				<img src="./voting.png" class="miniimage" />
-				<b style="margin-top: 1em;">Electoral Voting</b>
+				<b style="margin-top: 1em;">Electronic Voting</b>
 			</div>
 			<div class="minipaper" onclick="location.href = './Bidding/bidding_index.php';">
 				<img src="./Auction.png" class="miniimage" />
@@ -33,6 +33,34 @@
 			</div>
 		</div>
 	</center>
+	<div style="position: absolute; right: 0; bottom: 0; margin: 3em;" onclick="$('#contactModal').modal();">
+		<img style="padding: 1em;" src="./contact.png" class="contact" />
+	</div>
+	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content" style="border-radius: 20px;">
+				<div class="modal-header" style="background: linear-gradient(to right, #2657eb, #de6161); border-radius: 20px 20px 0px 0px">
+					<center>
+						<h5 class="modal-title" id="exampleModalLabel" style="color: #fff">Contact Us</h5>
+					</center>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="message-text" class="col-form-label">Message:</label>
+							<textarea class="form-control myinput1" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary mybutton2" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary mybutton2">Send message</button>
+				</div>
+			</div>
+		</div>
 </body>
 
 </html>

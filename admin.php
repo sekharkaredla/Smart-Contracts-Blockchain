@@ -233,18 +233,21 @@ jQuery( document ).ready(function( $ ) {
 <script type="text/javascript">
     function end_event(event_id){
             console.log('end_event');
-            $.ajax({
-                type: 'POST',
-                url: 'end_event.php',
-                success: function(data) {
-                    console.log('event ended');
-                },
-                  statusCode: {
-                        404: function() {
-                            console.log( "page not found" );
-                                }
-                            }
-            });
+            // $.ajax({
+            //     type: 'GET',
+            //     url: 'end_event.php',
+            //     success: function(data) {
+            //         console.log('event ended1');
+            //         window.location.href = 'end_event.php?event_id='+event_id;
+            //         console.log('event ended');
+            //     },
+            //       statusCode: {
+            //             404: function() {
+            //                 console.log( "page not found" );
+            //                     }
+            //                 }
+            // });
+            window.location.href = 'end_event.php?event_id='+event_id;
     }
 </script>
 <body style="background: linear-gradient(to right, #de6161, #2657eb);">
@@ -321,7 +324,8 @@ jQuery( document ).ready(function( $ ) {
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     echo"<tr>";
-                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">more</button><button class="btn btn-primary mybutton2" style="float: right;" id="end_event_button" onclick="end_event(\''.$row['event_id'].'\')">end</button></div></td>'; 
+                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">more</button><button class="btn btn-primary mybutton2" style="float: right;" id="end_event_button" onclick="end_event(\''.$row['event_id'].'\')">';
+                                    echo 'end</button></div></td>'; 
                                     echo"</tr>";
                                 }
                             }

@@ -16,9 +16,9 @@ console.log(web3.eth.accounts);
 code = fs.readFileSync('Bidding.sol');
 solc = require('solc');
 compiledCode = solc.compile(code);
-abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface);
+abiDefinition = JSON.parse(compiledCode.contracts[':Bidding'].interface);
 VotingContract = web3.eth.contract(abiDefinition);
-byteCode = compiledCode.contracts[':Voting'].bytecode;
+byteCode = compiledCode.contracts[':Bidding'].bytecode;
 deployedContract = VotingContract.new({data: byteCode, from: web3.eth.accounts[0], gas: 4700000});
 setTimeout(function(){
 contractInstance = VotingContract.at(deployedContract.address);

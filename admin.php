@@ -230,6 +230,23 @@ jQuery( document ).ready(function( $ ) {
 }
 
 </script> -->
+<script type="text/javascript">
+    function end_event(event_id){
+            console.log('end_event');
+            $.ajax({
+                type: 'POST',
+                url: 'end_event.php',
+                success: function(data) {
+                    console.log('event ended');
+                },
+                  statusCode: {
+                        404: function() {
+                            console.log( "page not found" );
+                                }
+                            }
+            });
+    }
+</script>
 <body style="background: linear-gradient(to right, #de6161, #2657eb);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Dashboard</a>
@@ -301,7 +318,7 @@ jQuery( document ).ready(function( $ ) {
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     echo"<tr>";
-                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">more</button></div></td>'; 
+                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">more</button><button class="btn btn-primary mybutton2" style="float: right;" id="end_event_button" onclick="end_event(\''.$row['event_id'].'\')">end</button></div></td>'; 
                                     echo"</tr>";
                                 }
                             }

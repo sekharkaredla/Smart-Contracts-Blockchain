@@ -16,6 +16,6 @@
   }
   else{
     echo "Voting ended<br/>";
-    header('Location:voting_index.php');
+    header('Location:admin.php');
   }
 ?>

@@ -76,11 +76,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     if($row['password']==md5($pass)){
       $_SESSION['user']=$user;
       $_SESSION['bidder_hash']=$row['bidder_hash'];
-      $sql="select event_name from event_details where event_id='".$row['event_id']."'";
-      $result2=$conn->query($sql);
-      $event_row=$result2->fetch_assoc();
-      $_SESSION['event_id']=$row['event_id'];
-      $_SESSION['event_name']=$event_row['event_name'];
+      // $sql="select event_name from event_details where event_id='".$row['event_id']."'";
+      // $result2=$conn->query($sql);
+      // $event_row=$result2->fetch_assoc();
+      // $_SESSION['event_id']=$row['event_id'];
+      // $_SESSION['event_name']=$event_row['event_name'];
       // $sql = "select voted from event_details_".$row['event_id']." where username='".$user."'";
       // $result3=$conn->query($sql);
       // // $voted_row=$result3->fetch_assoc();

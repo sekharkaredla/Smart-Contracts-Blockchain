@@ -87,7 +87,7 @@ body {
   background-color: #fff;
   box-shadow: 0px 0px 70px 10px rgb(46, 46, 46);
   border-radius: 30px;
-  transition: transform 0.2s;
+  transition: transform 0.1s;
 }
 .minipaper:hover {
   padding: 2em;
@@ -110,7 +110,7 @@ body {
   border-radius: 300px;
   background-color: #fff;
   box-shadow: 10px 10px 70px 5px rgb(46, 46, 46);
-  transition: transform 0.2s;
+  transition: transform 0.1s;
 }
 
 .contact:hover {

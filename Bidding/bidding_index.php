@@ -100,7 +100,7 @@
 							<center>
 								<h5>New User Sign Up </h5>
 							</center>
-							<form   id="reg" method="post" action="new_voter_backend.php">
+							<form   id="reg" method="post" action="new_bidder_backend.php">
 								<div class="form-group">
 									<!-- <label for="uidr">Email addres</label> -->
 									<input type="text" class="form-control myinput" id="uidr" name="username" aria-describedby="emailHelp" placeholder="Enter username"
@@ -112,33 +112,10 @@
 								</div>
 								<div class="form-group">
 									<!-- <label for="pidr">Password</label> -->
-									<input type="text" class="form-control myinput" name="voter_hash" placeholder="Enter Secret Voter Hash" required>
+									<input type="text" class="form-control myinput" name="bidder_hash" placeholder="Enter Secret Voter Hash" required>
 								</div>
 								<div class="form-group">
 									<!-- <label for="ename">Event Name</label> -->
-									<select name="eventlist" class="form-control myinput" style="height: 3em" id="el" >
-									<?php
-										$servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
-										$username='uopAdmin123';
-										$password='pandu123';
-										$database='bidDB';
-										$conn = new mysqli($servername, $username, $password, $database);
-										if ($conn->connect_error) 
-										{
-											die("Connection failed: " . $conn->connect_error);
-										}
-										$sql="select * from event_details";
-										$result = $conn->query($sql);
-
-											if ($result->num_rows > 0) {
-											// output data of each row
-											while($row = $result->fetch_assoc()) {
-												echo"<option class=\"options\" value=".$row['event_id'].">".$row['event_name']."</option>"; 
-											}}
-											$conn->close();
-										?>
-										
-									</select>
 								</div>
 								<input type="submit" class="btn btn-primary btn-lg btn-block mybutton" name="register" value="Register" />
 								<center>

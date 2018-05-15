@@ -34,10 +34,10 @@ contractInstance = VotingContract.at(
 );
 console.log(contractAddress);
 
-function placeBid() {
+function placeBid(event_id) {
 //  document.getElementById('vote_button').setAttribute("disabled","disabled");
   bidderHash = $("#bidderHash").val();
-  bidAmount = $("#bidAmount").val();
+  bidAmount = $("#"+event_id+"_bid").val();
   contractInstance.placeBid(bidderHash,bidAmount,{from: bidderHash}, function() {
     console.log("bid placed");
   });

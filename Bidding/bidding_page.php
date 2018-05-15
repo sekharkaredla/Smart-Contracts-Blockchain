@@ -19,6 +19,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"></head>
 
 <body class="container" style="background: linear-gradient(to right, #de6161, #2657eb); padding: 2em; margin-top: 1%;">
+<input type="hidden" id="bidderHash" value = "<?php echo $_SESSION['bidder_hash'] ?>"/>
   <div>
     <div class="paper" style="margin-top: 1em">
         <div class="table-responsive">
@@ -27,6 +28,14 @@
             </center>
             <table class="table table-striped">
                 <tbody>
+                    <thead>
+                        <tr>
+                        <th scope="col">Event Name</th>
+                        <th scope="col">Initial Price</th>
+                        <th scope="col">Enter Bid</th>
+                        <th scope="col">Place Bid</th>
+                        </tr>
+                    </thead>
                     <?php
                         $servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
                         $username='uopAdmin123';
@@ -45,7 +54,11 @@
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
                                 echo"<tr>";
-                                echo'<td><div><p>'.$row['event_name'].'</p><p>'.$row['event_price'].'</p><input type="number" id="'.$row['event_id'].'_bid" /><button class="btn btn-primary mybutton2" style="float: right;" onclick="placeBid(\''.$row['event_id'].'\')">Bid</button></div></td>';
+                                // echo'<td><div style="display: flex; align-items: baseline"><p>'.$row['event_name'].'</p><p>'.$row['event_price'].'</p><input class="myinput1" type="number" id="'.$row['event_id'].'_bid" /><button class="btn btn-primary mybutton2" style="float: right;" onclick="placeBid(\''.$row['event_id'].'\')">Bid</button></div></td>';
+                                echo '<td>'.$row['event_name'].'</td>';
+                                echo '<td>'.$row['event_price'].'</td>';
+                                echo '<td><input class="myinput" type="number" id="'.$row['event_id'].'_bid" /></td>';
+                                echo '<td><button class="btn btn-primary mybutton2" onclick="placeBid(\''.$row['event_id'].'\')">Bid</button></td>';
                                 echo"</tr>";
                             }
                         }

@@ -126,8 +126,8 @@ die();
     <script src="./web3.js"></script>
     <title>Admin Page</title>
 </head>
-<!-- <script src="chartGeneration.js"></script> -->
-<script>
+<script src="chartGeneration.js"></script>
+<!-- <script>
     //web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); //for local
 function display(event_id) {
   web3 = new Web3(
@@ -229,7 +229,7 @@ jQuery( document ).ready(function( $ ) {
   
 }
 
-</script>
+</script> -->
 <body style="background: linear-gradient(to right, #de6161, #2657eb);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Dashboard</a>

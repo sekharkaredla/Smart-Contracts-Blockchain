@@ -121,7 +121,7 @@
 										$servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
 										$username='uopAdmin123';
 										$password='pandu123';
-										$database='voterdb';
+										$database='bidDB';
 										$conn = new mysqli($servername, $username, $password, $database);
 										if ($conn->connect_error) 
 										{

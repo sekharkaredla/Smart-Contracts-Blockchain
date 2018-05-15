@@ -110,7 +110,7 @@
 								</div>
 								<div class="form-group">
 									<!-- <label for="pidr">Password</label> -->
-									<input type="text" class="form-control myinput" name="voter_hash" id="pidr" placeholder="Enter Secret Voter Hash" required>
+									<input type="text" class="form-control myinput" name="voter_hash" placeholder="Enter Secret Voter Hash" required>
 								</div>
 								<div class="form-group">
 									<!-- <label for="ename">Event Name</label> -->
@@ -160,7 +160,7 @@
 			</div>
 		</div>
 	</div>
-	<marquee><b>Contact US at Toll Free Number-1800111950 and Email ID-voting@gmail.com</b></marquee>
+	<!-- <marquee><b>Contact US at Toll Free Number-1800111950 and Email ID-voting@gmail.com</b></marquee> -->
 </body>
 
 </html>

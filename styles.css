@@ -82,18 +82,21 @@ body {
   padding: 2em;
   height: 15em;
   width: 15em;
-  margin: 1em;
+  margin: 3em;
   text-align: center;
   background-color: #fff;
+  box-shadow: 0px 0px 70px 10px rgb(46, 46, 46);
+  border-radius: 30px;
 }
 .minipaper:hover {
   padding: 2em;
   height: 15em;
   width: 15em;
-  margin: 1em;
+  margin: 3em;
   text-align: center;
   background-color: #fff;
-  box-shadow: 0px 0px 70px 10px rgb(46, 46, 46);
+  box-shadow: 0px 0px 70px 10px rgb(180, 180, 180);
+  border-radius: 30px;
 }
 
 .miniimage {

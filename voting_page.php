@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 session_start();
 if(!$_SESSION['user']){
-  header('Location:index.php');
+  header('Location:voting_index.php');
   die();
   };
 

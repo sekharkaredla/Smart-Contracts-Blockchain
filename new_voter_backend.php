@@ -29,6 +29,6 @@ else{
 	echo "not done";
 }
 $conn->close();
-header('Location:index.php');
+header('Location:voting_index.php');
 die();
 ?>

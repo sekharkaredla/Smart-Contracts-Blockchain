@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
       {
         echo "<script>
         alert('you have already voted');
-        window.location.href='index.php';
+        window.location.href='voting_index.php';
         </script>";
         // alert('you have already voted');
         // header('Location:index.php');
@@ -52,13 +52,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
     else{
       session_destroy();
-      header('Location:index.php');
+      header('Location:voting_index.php');
       die();
     }
   }
   else{
     session_destroy();
-    header('Location:index.php');
+    header('Location:voting_index.php');
     die();
   }
 }

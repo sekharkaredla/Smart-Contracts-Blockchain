@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!$_SESSION['user']){
-  header('Location:index.php');
+  header('Location:voting_index.php');
   die();
   };
 $servername='uopinstance.cisutjhhzfjh.us-west-2.rds.amazonaws.com';
@@ -24,6 +24,6 @@ if ($conn->query($sql) === FALSE) {
     echo "Event Details updated into database<br/>";
   }
 session_destroy();
-header('Location:index.php');
+header('Location:voting_index.php');
 die();
 ?>

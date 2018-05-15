@@ -100,7 +100,7 @@
 							<center>
 								<h5>New User Sign Up </h5>
 							</center>
-							<form   id="reg" method="post" action="new_voter_backend.php">
+							<form   id="reg" method="post" action="new_bidder_backend.php">
 								<div class="form-group">
 									<!-- <label for="uidr">Email addres</label> -->
 									<input type="text" class="form-control myinput" id="uidr" name="username" aria-describedby="emailHelp" placeholder="Enter username"
@@ -112,7 +112,7 @@
 								</div>
 								<div class="form-group">
 									<!-- <label for="pidr">Password</label> -->
-									<input type="text" class="form-control myinput" name="voter_hash" placeholder="Enter Secret Voter Hash" required>
+									<input type="text" class="form-control myinput" name="bidder_hash" placeholder="Enter Secret Voter Hash" required>
 								</div>
 								<div class="form-group">
 									<!-- <label for="ename">Event Name</label> -->

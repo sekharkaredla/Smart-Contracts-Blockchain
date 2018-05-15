@@ -24,7 +24,7 @@
 	<div style="margin-top: 1%">
 		<div class="paper">
 			<center>
-				<h2 style="color: #000; margin-top: 1em">Bidding Login to Access Distributed Services</h2>
+				<h2 style="color: #000; margin-top: 1em">Login to Access Distributed Bidding Services</h2>
 			</center>
 			<div class="row" id="logins" style="padding: 8em">
 				<div class="col-sm">

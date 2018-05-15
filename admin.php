@@ -264,6 +264,9 @@ jQuery( document ).ready(function( $ ) {
                 <li class="nav-item">
                     <a class="menu-btn nav-link" href="#misc">Misc</a>
                 </li>
+                <li class="nav-item">
+                    <a class="menu-btn nav-link" onclick="location.href = 'voting_index.php'" >Logout</a>
+                </li>
             </ul>
         </div>
     </nav>

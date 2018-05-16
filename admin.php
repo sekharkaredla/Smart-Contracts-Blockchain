@@ -124,7 +124,7 @@ die();
     <link rel="stylesheet" href="./styles.css">
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="./web3.js"></script>
-    <title>Admin Dashboard</title>
+    <title>Voter Admin Dashboard</title>
 </head>
 <script src="chartGeneration.js"></script>
 <!-- <script>
@@ -252,7 +252,7 @@ jQuery( document ).ready(function( $ ) {
 </script>
 <body style="background: linear-gradient(to right, #de6161, #2657eb);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Admin Dashboard</a>
+        <a class="navbar-brand" href="#">Voter Admin Dashboard</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -339,20 +339,22 @@ jQuery( document ).ready(function( $ ) {
     <div class="menu-content container" id="misc"> 
         Misc
     </div>
-    <div class="modal" role="dialog" id="myModal">
-        <div class="modal-dialog">
-        <div class="modal-header" style="background: linear-gradient(to right, #de6161,#2657eb); border-radius: 20px 20px 0px 0px">
-					<center>
-						<h5 class="modal-title" id="exampleModalLabel" style="color: #fff">Statistics</h5>
-					</center>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-                </div>
-                <div class="modal-content" id="mcontent" >
-                    <div class="row">
-                        <div class="col-lg" id="mcontent1"></div>
-                        <!-- <div class="col-lg" id="mcontent2"></div> -->
+    <div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="myModal">
+        <div class="modal-dialog" role="document">
+                <div class="modal-content" id="mcontent" style="width: 100%;">
+                    <div class="modal-header" style="background: linear-gradient(to right, #de6161,#2657eb); border-radius: 20px 20px 0px 0px">
+                        <center>
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #fff">Statistics</h5>
+                        </center>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="display: inline;">
+                        <div class="row">
+                            <div id="mcontent1" style="display: inline-block"></div>
+                            <!-- <div id="mcontent2" style="display: inline-block"></div> -->
+                        </div>
                     </div>
                 </div>
         </div>

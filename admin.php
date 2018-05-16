@@ -124,7 +124,7 @@ die();
     <link rel="stylesheet" href="./styles.css">
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="./web3.js"></script>
-    <title>Admin Page</title>
+    <title>Admin Dashboard</title>
 </head>
 <script src="chartGeneration.js"></script>
 <!-- <script>
@@ -324,8 +324,8 @@ jQuery( document ).ready(function( $ ) {
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     echo"<tr>";
-                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">more</button><button class="btn btn-primary mybutton2" style="float: right; margin-right: 1em;" id="end_event_button" onclick="end_event(\''.$row['event_id'].'\')">';
-                                    echo 'end</button></div></td>'; 
+                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">Statistics</button><button class="btn btn-primary mybutton2" style="float: right; margin-right: 1em;" id="end_event_button" onclick="end_event(\''.$row['event_id'].'\')">';
+                                    echo 'End Event</button></div></td>'; 
                                     echo"</tr>";
                                 }
                             }
@@ -339,8 +339,16 @@ jQuery( document ).ready(function( $ ) {
     <div class="menu-content container" id="misc"> 
         Misc
     </div>
-    <div class="modal" tabindex="-1" role="dialog" id="myModal">
-        <div class="modal-dialog" style="padding: 1em" role="document">
+    <div class="modal" role="dialog" id="myModal">
+        <div class="modal-dialog">
+        <div class="modal-header" style="background: linear-gradient(to right, #de6161,#2657eb); border-radius: 20px 20px 0px 0px">
+					<center>
+						<h5 class="modal-title" id="exampleModalLabel" style="color: #fff">Statistics</h5>
+					</center>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
             <div class="modal-content" id="mcontent">
             </div>
         </div>

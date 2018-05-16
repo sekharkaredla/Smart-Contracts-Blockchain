@@ -68,7 +68,7 @@ function display(event_id) {
   for (var name in candidates) {
     var tempDict = {};
     tempDict["y"] = contractInstance.totalVotesFor.call(name).toString();
-    tempDict["label"] = name;
+    tempDict["indexLabel"] = name;
     mydataPoints.push(tempDict);
   }
   console.log(mydataPoints);
@@ -82,6 +82,7 @@ function display(event_id) {
     data: [
       {
         type: "pie",
+        showInLegend: true,
         startAngle: 240,
         yValueFormatString: '##0.00"%"',
         indexLabel: "{label} {y}",

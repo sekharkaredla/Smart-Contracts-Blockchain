@@ -65,16 +65,21 @@ function display(event_id) {
   console.log(candidates);
   console.log(contractAddress);
   var mydataPoints = [];
+  var mydataPoints1 = [];
   for (var name in candidates) {
     var tempDict = {};
+    var tempDict1 = {};
     tempDict["y"] = contractInstance.totalVotesFor.call(name).toString();
-    tempDict["indexLabel"] = name;
+    tempDict["label"] = name;
+    // tempDict1["y"] = Number(contractInstance.totalVotesFor.call(name));
+    // tempDict1["label"] = name;
     mydataPoints.push(tempDict);
+    // mydataPoints1.push(tempDict1);
   }
-  console.log(mydataPoints);
+  console.log(mydataPoints, mydataPoints1);
 
   console.log("onclck", event_id);
-  var chart = new CanvasJS.Chart("mcontent", {
+  var chart1 = new CanvasJS.Chart("mcontent1", {
     animationEnabled: true,
     title: {
       text: "Event: " + event_id
@@ -90,6 +95,54 @@ function display(event_id) {
       }
     ]
   });
-  chart.render();
+  chart1.render();
+
+  // var chart2 = new CanvasJS.Chart("mcontent2", {
+  //   // animationEnabled: true,
+  //   title: {
+  //     text: "Event: " + event_id
+  //   },
+  //   data: [
+  //     {
+  //       type: "bar",
+  //       dataPoints: mydataPoints1
+  //     }
+  //   ]
+  // });
+  // chart2.render();
+  // var chart3 = new CanvasJS.Chart("mcontent3", {
+  //   animationEnabled: true,
+  //   title: {
+  //     text: "Event: " + event_id
+  //   },
+  //   data: [
+  //     {
+  //       type: "pie",
+  //       showInLegend: true,
+  //       startAngle: 240,
+  //       yValueFormatString: '##0.00"%"',
+  //       indexLabel: "{label} {y}",
+  //       dataPoints: mydataPoints
+  //     }
+  //   ]
+  // });
+  // chart3.render();
+  // var chart4 = new CanvasJS.Chart("mcontent4", {
+  //   animationEnabled: true,
+  //   title: {
+  //     text: "Event: " + event_id
+  //   },
+  //   data: [
+  //     {
+  //       type: "pie",
+  //       showInLegend: true,
+  //       startAngle: 240,
+  //       yValueFormatString: '##0.00"%"',
+  //       indexLabel: "{label} {y}",
+  //       dataPoints: mydataPoints
+  //     }
+  //   ]
+  // });
+  // chart4.render();
   $("#myModal").modal();
 }

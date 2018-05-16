@@ -348,9 +348,13 @@ jQuery( document ).ready(function( $ ) {
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-				</div>
-            <div class="modal-content" id="mcontent">
-            </div>
+                </div>
+                <div class="modal-content" id="mcontent" >
+                    <div class="row">
+                        <div class="col-lg" id="mcontent1"></div>
+                        <!-- <div class="col-lg" id="mcontent2"></div> -->
+                    </div>
+                </div>
         </div>
     </div>
     <script>

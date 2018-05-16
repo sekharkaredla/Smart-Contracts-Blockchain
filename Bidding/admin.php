@@ -188,24 +188,69 @@ jQuery( document ).ready(function( $ ) {
 
 </script> -->
 <script type="text/javascript">
-    function end_event(event_id){
-            console.log('end_event');
-            // $.ajax({
-            //     type: 'GET',
-            //     url: 'end_event.php',
-            //     success: function(data) {
-            //         console.log('event ended1');
-            //         window.location.href = 'end_event.php?event_id='+event_id;
-            //         console.log('event ended');
-            //     },
-            //       statusCode: {
-            //             404: function() {
-            //                 console.log( "page not found" );
-            //                     }
-            //                 }
-            // });
-            window.location.href = 'end_event.php?event_id='+event_id;
-    }
+function end_event(event_id){
+        console.log('end_event');
+        // $.ajax({
+        //     type: 'GET',
+        //     url: 'end_event.php',
+        //     success: function(data) {
+        //         console.log('event ended1');
+        //         window.location.href = 'end_event.php?event_id='+event_id;
+        //         console.log('event ended');
+        //     },
+        //       statusCode: {
+        //             404: function() {
+        //                 console.log( "page not found" );
+        //                     }
+        //                 }
+        // });
+        // window.location.href = 'end_event.php?event_id='+event_id;
+        web3 = new Web3(new Web3.providers.HttpProvider("http://54.213.179.152:8545")); //for aws
+        abi = JSON.parse(
+          '[{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"bidsReceived","outputs":[{"name":"","type":"uint32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"bidder","type":"bytes32"}],"name":"totalBidBy","outputs":[{"name":"","type":"uint32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"bidder","type":"bytes32"},{"name":"bid","type":"uint32"}],"name":"placeBid","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"name":"bidderNames","type":"bytes32[]"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]'
+        );
+        VotingContract = web3.eth.contract(abi);
+        var contractAddress = "";
+        // const url_contract =
+        //   "https://s3.ap-south-1.amazonaws.com/bidding-system/contract_" +
+        //   event_id +
+        //   ".json";
+
+        function getContract(handle, event_id) {
+          $.ajax({
+            type: "GET",
+            url:
+              "https://s3.ap-south-1.amazonaws.com/bidding-system/contract_" +
+              event_id +
+              ".json",
+            async: false,
+            contentType: "application/json",
+            dataType: "json",
+            success: function(json) {
+              handle(json);
+            },
+            error: function(e) {
+              alert("error");
+            }
+          });
+        }
+        function getWinner(event_id){
+          getContract(function(data) {
+            contractAddress = data.contract;
+          }, event_id);
+          contractInstance = VotingContract.at(contractAddress);
+          console.log(contractAddress);
+          var accounts = web3.eth.accounts;
+          var temp = 0;
+          for (i = 0;i < accounts.length;i++){
+            if (temp<contractInstance.totalBidBy(accounts[i])){
+              temp = contractInstance.totalBidBy(accounts[i]);
+            }
+          console.log(temp);
+          }
+        }
+        getWinner(event_id);
+}
 </script>
 <body style="background: linear-gradient(to right, #de6161, #2657eb);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

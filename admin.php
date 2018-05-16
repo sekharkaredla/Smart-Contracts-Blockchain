@@ -341,8 +341,7 @@ jQuery( document ).ready(function( $ ) {
     </div>
     <div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="myModal">
         <div class="modal-dialog" role="document">
-                <div class="modal-content" id="mcontent" style="width: 100%;">
-                    <div class="modal-header" style="background: linear-gradient(to right, #de6161,#2657eb); border-radius: 20px 20px 0px 0px">
+        <div class="modal-header" style="background: linear-gradient(to right, #de6161,#2657eb); border-radius: 20px 20px 0px 0px">
                         <center>
                             <h5 class="modal-title" id="exampleModalLabel" style="color: #fff">Statistics</h5>
                         </center>
@@ -350,11 +349,10 @@ jQuery( document ).ready(function( $ ) {
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body" style="display: inline;">
-                        <div class="row">
-                            <div id="mcontent1" style="display: inline-block"></div>
-                            <!-- <div id="mcontent2" style="display: inline-block"></div> -->
-                        </div>
+                <div class="modal-content" id="mcontent" style="width: 100%;">
+                    
+                    <div>
+                        <div id="mcontent1"></div>
                     </div>
                 </div>
         </div>

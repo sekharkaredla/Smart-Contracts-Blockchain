@@ -246,8 +246,8 @@ function end_event(event_id){
             if (temp<contractInstance.totalBidBy(accounts[i])){
               temp = contractInstance.totalBidBy(accounts[i]);
             }
-          console.log(temp);
           }
+          console.log(temp);
         }
         getWinner(event_id);
 }

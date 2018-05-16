@@ -209,7 +209,7 @@ jQuery( document ).ready(function( $ ) {
 </script>
 <body style="background: linear-gradient(to right, #de6161, #2657eb);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Dashboard</a>
+        <a class="navbar-brand" href="#">Admin Dashboard</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -224,8 +224,8 @@ jQuery( document ).ready(function( $ ) {
                 <li class="nav-item">
                     <a class="menu-btn nav-link" href="#misc">Misc</a>
                 </li>
-                <li class="nav-item">
-                    <a class="menu-btn nav-link" onclick="location.href = 'bidding_index.php'" >Logout</a>
+                <li class="nav-item" style="position: absolute; right: 10;" >
+                    <a class="menu-btn nav-link" style="color: #f00;" onclick="location.href = 'bidding_index.php'" >Logout</a>
                 </li>
             </ul>
         </div>
@@ -234,7 +234,7 @@ jQuery( document ).ready(function( $ ) {
     <div class="menu-content container" id="create_event">
         <div class="paper" style="margin-top: 10%; padding: 2em;">
             <center>
-                <h3>Admin</h3>
+                <h3>Create New Event</h3>
             </center>
             <form action="" method="post">
                 <div class="form-group">
@@ -281,8 +281,8 @@ jQuery( document ).ready(function( $ ) {
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     echo"<tr>";
-                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">more</button><button class="btn btn-primary mybutton2" style="float: right;" id="end_event_button" onclick="end_event(\''.$row['event_id'].'\')">';
-                                    echo 'end</button></div></td>';
+                                    echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" id="end_event_button" onclick="end_event(\''.$row['event_id'].'\')">';
+                                    echo 'End Event</button></div></td>';
                                     echo"</tr>";
                                 }
                             }

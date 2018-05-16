@@ -80,10 +80,10 @@ die();
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="./web3.js"></script>
+    <script src="../web3.js"></script>
     <title>Bidding Admin Dashboard</title>
 </head>
-<script src="chartGeneration.js"></script>
+<!-- <script src="chartGeneration.js"></script> -->
 <!-- <script>
     //web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); //for local
 function display(event_id) {

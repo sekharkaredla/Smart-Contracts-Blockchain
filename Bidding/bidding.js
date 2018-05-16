@@ -38,7 +38,9 @@ function placeBid(event_id) {
 
   //  document.getElementById('vote_button').setAttribute("disabled","disabled");
   bidderHash = $("#bidderHash").val();
+  console.log(bidderHash);
   bidAmount = $("#" + event_id + "_bid").val();
+  console.log(bidAmount);
   contractInstance.placeBid(
     bidderHash,
     bidAmount,

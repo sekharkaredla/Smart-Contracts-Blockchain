@@ -1,0 +1,55 @@
+[PM2] Spawning PM2 daemon with pm2_home=/home/pranith/.pm2
+[PM2] PM2 Successfully daemonized
+[PM2] Starting /home/pranith/project/block_chain/smart-contracts-blockchain/Bidding/biddingsetup_id100.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────┬───────────┬─────────┬──────────┐
+│ App name           │ id │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem       │ user    │ watching │
+├────────────────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────┼───────────┼─────────┼──────────┤
+│ biddingsetup_id100 │ 0  │ fork │ 7598 │ online │ 0       │ 0s     │ 16% │ 25.3 MB   │ pranith │ disabled │
+└────────────────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────┴───────────┴─────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/pranith/project/block_chain/smart-contracts-blockchain/Bidding/biddingsetup_id100.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬─────────┬──────────┐
+│ App name           │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user    │ watching │
+├────────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼─────────┼──────────┤
+│ biddingsetup_id100 │ 1  │ fork │ 11747 │ online │ 0       │ 0s     │ 0%  │ 17.7 MB    │ pranith │ disabled │
+│ ganache-cli        │ 0  │ fork │ 11565 │ online │ 0       │ 2m     │ 0%  │ 161.7 MB   │ pranith │ disabled │
+└────────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴─────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/pranith/project/block_chain/smart-contracts-blockchain/Bidding/biddingsetup_id100.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬─────────┬──────────┐
+│ App name           │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user    │ watching │
+├────────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼─────────┼──────────┤
+│ biddingsetup_id100 │ 1  │ fork │ 14093 │ online │ 0       │ 0s     │ 99% │ 21.8 MB    │ pranith │ disabled │
+│ ganache-cli        │ 0  │ fork │ 12885 │ online │ 0       │ 21m    │ 0%  │ 162.5 MB   │ pranith │ disabled │
+└────────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴─────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/pranith/project/block_chain/smart-contracts-blockchain/Bidding/biddingsetup_id100.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬─────────┬──────────┐
+│ App name           │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user    │ watching │
+├────────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼─────────┼──────────┤
+│ biddingsetup_id100 │ 1  │ fork │ 16314 │ online │ 0       │ 0s     │ 0%  │ 17.7 MB    │ pranith │ disabled │
+│ ganache-cli        │ 0  │ fork │ 16135 │ online │ 0       │ 2m     │ 0%  │ 161.7 MB   │ pranith │ disabled │
+└────────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴─────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/pranith/project/block_chain/smart-contracts-blockchain/Bidding/biddingsetup_id100.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬─────────┬──────────┐
+│ App name           │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user    │ watching │
+├────────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼─────────┼──────────┤
+│ biddingsetup_id100 │ 2  │ fork │ 17957 │ online │ 0       │ 0s     │ 99% │ 21.9 MB    │ pranith │ disabled │
+│ ganache-cli        │ 0  │ fork │ 16135 │ online │ 0       │ 7m     │ 0%  │ 161.3 MB   │ pranith │ disabled │
+└────────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴─────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /home/pranith/project/block_chain/smart-contracts-blockchain/Bidding/biddingsetup_id100.js in fork_mode (1 instance)
+[PM2] Done.
+┌────────────────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬─────────┬──────────┐
+│ App name           │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user    │ watching │
+├────────────────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼─────────┼──────────┤
+│ biddingsetup_id100 │ 3  │ fork │ 18807 │ online │ 0       │ 0s     │ 66% │ 23.3 MB    │ pranith │ disabled │
+│ ganache-cli        │ 0  │ fork │ 16135 │ online │ 0       │ 11m    │ 0%  │ 167.3 MB   │ pranith │ disabled │
+└────────────────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴─────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app

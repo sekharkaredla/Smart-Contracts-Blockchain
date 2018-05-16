@@ -55,7 +55,7 @@ else{
 die();
 };
 ?>
-        
+
 
 <html>
 
@@ -71,7 +71,7 @@ die();
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 	 crossorigin="anonymous"></script>
 
@@ -183,7 +183,7 @@ jQuery( document ).ready(function( $ ) {
   // Code that uses jQuery's $ can follow here.
   $('#myModal').modal();
 });
-  
+
 }
 
 </script> -->
@@ -225,12 +225,12 @@ jQuery( document ).ready(function( $ ) {
                     <a class="menu-btn nav-link" href="#misc">Misc</a>
                 </li>
                 <li class="nav-item">
-                    <a class="menu-btn nav-link" onclick="location.href = 'voting_index.php'" >Logout</a>
+                    <a class="menu-btn nav-link" onclick="location.href = 'bidding_index.php'" >Logout</a>
                 </li>
             </ul>
         </div>
     </nav>
-    
+
     <div class="menu-content container" id="create_event">
         <div class="paper" style="margin-top: 10%; padding: 2em;">
             <center>
@@ -255,7 +255,7 @@ jQuery( document ).ready(function( $ ) {
             </form>
         </div>
     </div>
-    <div class="menu-content container" id="all_events"> 
+    <div class="menu-content container" id="all_events">
         <div class="paper" style="margin-top: 1em">
             <div class="table-responsive">
                 <center>
@@ -269,7 +269,7 @@ jQuery( document ).ready(function( $ ) {
                             $password='pandu123';
                             $database='bidDB';
                             $conn = new mysqli($servername, $username, $password, $database);
-                            if ($conn->connect_error) 
+                            if ($conn->connect_error)
                             {
                                 die("Connection failed: " . $conn->connect_error);
                             }
@@ -282,18 +282,18 @@ jQuery( document ).ready(function( $ ) {
                                 while($row = $result->fetch_assoc()) {
                                     echo"<tr>";
                                     echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">more</button><button class="btn btn-primary mybutton2" style="float: right;" id="end_event_button" onclick="end_event(\''.$row['event_id'].'\')">';
-                                    echo 'end</button></div></td>'; 
+                                    echo 'end</button></div></td>';
                                     echo"</tr>";
                                 }
                             }
                             $conn->close();
                         ?>
                     </tbody>
-                </table>  
+                </table>
             </div>
         </div>
     </div>
-    <div class="menu-content container" id="misc"> 
+    <div class="menu-content container" id="misc">
         Misc
     </div>
     <div class="modal" tabindex="-1" role="dialog" id="myModal">

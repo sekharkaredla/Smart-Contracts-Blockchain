@@ -51,13 +51,14 @@ else{
 $candiateNames = $_POST['candidate_names'];
 // print_r(explode(" ",$candiateNames));
 // print_r(count(explode(" ",$candiateNames)));
-// $newNames = [];
-// for($i=0; $i<count($candiateNames); $i++){
-//     $newNames[] = $candiateNames[$i];
-// }
+$newNames = [];
+for($i=0; $i<count($candiateNames); $i++){
+    // $newNames[] = $candiateNames[$i];
+    array_push($newNames,$candiateNames[$i]);
+}
 // print_r($newNames);
-$candidateAssocArray = explode(" ",$candiateNames);
-$candidateLength = count($candidateAssocArray);
+// $candidateAssocArray = explode(" ",$candiateNames);
+$candidateLength = count($newNames);
 $bucket = 'smart-contracts-blockchain';
 $keyname = 'candidate_'.$event_id.'.json';
 // $provider = CredentialProvider::ini();
@@ -72,7 +73,7 @@ $s3 = new S3Client([
 ]);
 $outputObject = array();
 $outputObject['candidateDetails'] = array();
-$outputObject['candidateDetails']['candidates'] = $candidateAssocArray;
+$outputObject['candidateDetails']['candidates'] = $newNames;
 $outputObject['candidateDetails']['candidateLength'] = $candidateLength;
 // print_r(json_encode($outputObject));
 try {
@@ -103,7 +104,7 @@ try {
 die();
 };
 ?>
-        
+
 
 <html>
 
@@ -119,7 +120,7 @@ die();
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 	 crossorigin="anonymous"></script>
 
@@ -231,7 +232,7 @@ jQuery( document ).ready(function( $ ) {
   // Code that uses jQuery's $ can follow here.
   $('#myModal').modal();
 });
-  
+
 }
 
 </script> -->
@@ -278,7 +279,7 @@ jQuery( document ).ready(function( $ ) {
             </ul>
         </div>
     </nav>
-    
+
     <div class="menu-content container" id="create_event">
         <div class="paper" style="margin-top: 10%; padding: 2em;">
             <center>
@@ -296,9 +297,8 @@ jQuery( document ).ready(function( $ ) {
                 <div class="form-group">
 
                     <label for="cnid">Candidate Names</label>
-                    <input type="textarea" class="form-control myinput1" name="candidate_names" id="cnid" placeholder="Enter candidate names"
-                        required/>
-                        <!-- <script>
+                    <!-- <input type="textarea" class="form-control myinput1" name="candidate_names" id="cnid" placeholder="Enter candidate names" required/> -->
+                        <script>
                     function addItem (){
                         console.log("adding item");
                         let item = '<input type="text" class="form-control myinput1" style="margin: 1em; width: 50%;" name="candidate_names[]" placeholder="Enter candidate name" required/>';
@@ -309,14 +309,14 @@ jQuery( document ).ready(function( $ ) {
                     <button type="button" class="btn btn-primary mybutton2" onclick="addItem()">Add name</button>
                     <input type="text" class="form-control myinput1" style="margin: 1em; width: 50%;" name="candidate_names[]" placeholder="Enter candidate name" required/>
                     <input type="text" class="form-control myinput1" style="margin: 1em; width: 50%;" name="candidate_names[]" placeholder="Enter candidate name" required/>
-                    </div> -->
-                    
+                    </div>
+
                 </div>
                 <input type="submit" style="margin-top: 3em" class="btn btn-primary btn-lg btn-block mybutton2" value="Submit" name="SubmitButton" />
             </form>
         </div>
     </div>
-    <div class="menu-content container" id="all_events"> 
+    <div class="menu-content container" id="all_events">
         <div class="paper" style="margin-top: 1em">
             <div class="table-responsive">
                 <center>
@@ -330,7 +330,7 @@ jQuery( document ).ready(function( $ ) {
                             $password='pandu123';
                             $database='voterdb';
                             $conn = new mysqli($servername, $username, $password, $database);
-                            if ($conn->connect_error) 
+                            if ($conn->connect_error)
                             {
                                 die("Connection failed: " . $conn->connect_error);
                             }
@@ -343,18 +343,18 @@ jQuery( document ).ready(function( $ ) {
                                 while($row = $result->fetch_assoc()) {
                                     echo"<tr>";
                                     echo'<td><div>'.$row['event_name'].' <button class="btn btn-primary mybutton2" style="float: right;" onclick="display(\''.$row['event_id'].'\')">Statistics</button><button class="btn btn-primary mybutton2" style="float: right; margin-right: 1em;" id="end_event_button" onclick="end_event(\''.$row['event_id'].'\')">';
-                                    echo 'End Event</button></div></td>'; 
+                                    echo 'End Event</button></div></td>';
                                     echo"</tr>";
                                 }
                             }
                             $conn->close();
                         ?>
                     </tbody>
-                </table>  
+                </table>
             </div>
         </div>
     </div>
-    <div class="menu-content container" id="misc"> 
+    <div class="menu-content container" id="misc">
         Misc
     </div>
     <div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="myModal">
@@ -368,7 +368,7 @@ jQuery( document ).ready(function( $ ) {
                         </button>
                     </div>
                 <div class="modal-content" id="mcontent" style="width: 100%;">
-                    
+
                     <div>
                         <div id="mcontent1"></div>
                     </div>

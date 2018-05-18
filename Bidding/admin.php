@@ -253,7 +253,7 @@ function end_event(event_id){
         getWinner(event_id);
 }
 </script>
-<body style="background: linear-gradient(to right, #de6161, #2657eb);">
+<body style="background: linear-gradient(to right, #02111d, #037bb5, #02111d);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Bidding Admin Dashboard</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

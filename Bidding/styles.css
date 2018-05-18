@@ -6,7 +6,7 @@
 .mybutton {
   border-radius: 300px;
   padding: 2%;
-  background: linear-gradient(to right, #2657eb, #de6161);
+  background: linear-gradient(to right, #02111d, #037bb5, #02111d);
 }
 
 .myinput1 {
@@ -20,12 +20,12 @@
 
 .mybutton1 {
   border-radius: 300px;
-  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  background: linear-gradient(to right, #02111d, #037bb5, #02111d);
 }
 
 .mybutton2 {
   border-radius: 300px;
-  background: linear-gradient(to right, #2657eb, #de6161);
+  background: linear-gradient(to right, #02111d, #037bb5, #02111d);
 }
 
 .toggle.ios,

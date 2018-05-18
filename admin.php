@@ -256,7 +256,7 @@ jQuery( document ).ready(function( $ ) {
             window.location.href = 'end_event.php?event_id='+event_id;
     }
 </script>
-<body style="background: linear-gradient(to right, #de6161, #2657eb);">
+<body style="background:linear-gradient(to right, #02111d, #037bb5, #02111d);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Voter Admin Dashboard</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -359,7 +359,7 @@ jQuery( document ).ready(function( $ ) {
     </div>
     <div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="myModal">
         <div class="modal-dialog" role="document">
-        <div class="modal-header" style="background: linear-gradient(to right, #de6161,#2657eb); border-radius: 20px 20px 0px 0px">
+        <div class="modal-header" style="background:linear-gradient(to right, #02111d, #037bb5, #02111d); border-radius: 20px 20px 0px 0px">
                         <center>
                             <h5 class="modal-title" id="exampleModalLabel" style="color: #fff">Statistics</h5>
                         </center>

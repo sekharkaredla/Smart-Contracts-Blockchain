@@ -21,7 +21,7 @@
 	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"></head>
 
-<body class="container" style="background: linear-gradient(to right, #de6161, #2657eb); padding: 2em; margin-top: 1%;">
+<body class="container" style="background:linear-gradient(to right, #02111d, #037bb5, #02111d); padding: 2em; margin-top: 1%;">
 <input type="hidden" id="bidderHash" value = "<?php echo $_SESSION['bidder_hash'] ?>"/>
   <div>
     <div class="paper" style="margin-top: 1em">

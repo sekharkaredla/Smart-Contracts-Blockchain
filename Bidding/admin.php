@@ -247,8 +247,8 @@ function end_event(event_id){
             if (temp<temp2){
               temp = temp2;
             }
+            console.log(temp);
           }
-          console.log(temp);
         }
         getWinner(event_id);
 }

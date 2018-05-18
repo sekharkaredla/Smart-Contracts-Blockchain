@@ -31,7 +31,7 @@ $candidateLength = $json['candidateDetails']['candidateLength'];
 	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"></head>
 
-<body class="container" style="background: linear-gradient(to right, #de6161, #2657eb); padding: 2em; margin-top: 1%;">
+<body class="container" style="background:linear-gradient(to right, #02111d, #037bb5, #02111d); padding: 2em; margin-top: 1%;">
   <input type="hidden" id="event_id" value = "<?php echo $_SESSION['event_id'] ?>"/>
   <input type="hidden" id="voter_hash" value = "<?php echo $_SESSION['voter_hash'] ?>"/>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

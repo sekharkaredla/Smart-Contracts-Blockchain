@@ -243,8 +243,9 @@ function end_event(event_id){
           var accounts = web3.eth.accounts;
           var temp = 0;
           for (i = 0;i < accounts.length;i++){
-            if (temp<contractInstance.totalBidBy(accounts[i])){
-              temp = contractInstance.totalBidBy(accounts[i]);
+            var temp2 = parseInt(contractInstance.totalBidBy(accounts[i]).toString());
+            if (temp<temp2){
+              temp = temp2;
             }
           }
           console.log(temp);

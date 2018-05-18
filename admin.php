@@ -51,11 +51,11 @@ else{
 $candiateNames = $_POST['candidate_names'];
 // print_r(explode(" ",$candiateNames));
 // print_r(count(explode(" ",$candiateNames)));
-$newNames = [];
-for($i=0; $i<count($candiateNames); $i++){
-    $newNames[] = $candiateNames[$i];
-}
-print_r($newNames);
+// $newNames = [];
+// for($i=0; $i<count($candiateNames); $i++){
+//     $newNames[] = $candiateNames[$i];
+// }
+// print_r($newNames);
 $candidateAssocArray = explode(" ",$candiateNames);
 $candidateLength = count($candidateAssocArray);
 $bucket = 'smart-contracts-blockchain';
@@ -72,7 +72,7 @@ $s3 = new S3Client([
 ]);
 $outputObject = array();
 $outputObject['candidateDetails'] = array();
-$outputObject['candidateDetails']['candidates'] = $newNames;
+$outputObject['candidateDetails']['candidates'] = $candidateAssocArray;
 $outputObject['candidateDetails']['candidateLength'] = $candidateLength;
 // print_r(json_encode($outputObject));
 try {
@@ -296,9 +296,9 @@ jQuery( document ).ready(function( $ ) {
                 <div class="form-group">
 
                     <label for="cnid">Candidate Names</label>
-                    <!-- <input type="textarea" class="form-control myinput1" name="candidate_names" id="cnid" placeholder="Enter candidate names"
-                        required/> -->
-                        <script>
+                    <input type="textarea" class="form-control myinput1" name="candidate_names" id="cnid" placeholder="Enter candidate names"
+                        required/>
+                        <!-- <script>
                     function addItem (){
                         console.log("adding item");
                         let item = '<input type="text" class="form-control myinput1" style="margin: 1em; width: 50%;" name="candidate_names[]" placeholder="Enter candidate name" required/>';
@@ -309,7 +309,7 @@ jQuery( document ).ready(function( $ ) {
                     <button type="button" class="btn btn-primary mybutton2" onclick="addItem()">Add name</button>
                     <input type="text" class="form-control myinput1" style="margin: 1em; width: 50%;" name="candidate_names[]" placeholder="Enter candidate name" required/>
                     <input type="text" class="form-control myinput1" style="margin: 1em; width: 50%;" name="candidate_names[]" placeholder="Enter candidate name" required/>
-                    </div>
+                    </div> -->
                     
                 </div>
                 <input type="submit" style="margin-top: 3em" class="btn btn-primary btn-lg btn-block mybutton2" value="Submit" name="SubmitButton" />

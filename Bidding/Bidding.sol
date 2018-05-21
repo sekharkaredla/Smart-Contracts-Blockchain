@@ -19,11 +19,11 @@ contract Bidding {
   deploy the contract to the blockchain. When we deploy the contract,
   we will pass an array of candidates who will be contesting in the election
   */
-  function Bidding(bytes32[] bidderNames) public {
+  /*function Bidding(bytes32[] bidderNames) public {
     for(uint8 i =0 ;i<bidderNames.length;i++){
     bidsReceived[bidderNames[i]] = 0;
     }
-  }
+  }*/
 
   // This function returns the total votes a candidate has received so far
   function totalBidBy(bytes32 bidder) view public returns (uint32) {

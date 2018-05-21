@@ -21,19 +21,18 @@
 </head>
 
 <body class="container-fluid" style="background:linear-gradient(to right, #02111d, #037bb5, #02111d); padding: 2em;">
-	<center style="margin: 10em;">
-		<div style="display: inline-flex;">
-			<div class="minipaper" onclick="location.href = './voting_index.php';">
-				<img src="./voting.png" class="miniimage" />
-				<b style="margin-top: 1em;">Electronic Voting</b>
-			</div>
-			<div class="minipaper" onclick="location.href = './Bidding/bidding_index.php';">
-				<img src="./Auction.png" class="miniimage" />
-				<b style="margin-top: 1em;">Bidding System</b>
-			</div>
+
+	<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); justify-items: center;">
+		<div class="minipaper" onclick="location.href = './voting_index.php';">
+			<img src="./voting.png" class="miniimage" />
+			<b style="margin-top: 1em;">Electronic Voting</b>
 		</div>
-	</center>
-	<div style="position: absolute; right: 0; bottom: 0; margin: 3em;" onclick="$('#contactModal').modal();">
+		<div class="minipaper" onclick="location.href = './Bidding/bidding_index.php';">
+			<img src="./Auction.png" class="miniimage" />
+			<b style="margin-top: 1em;">Bidding System</b>
+		</div>
+	</div>
+	<div style="position: fixed; right: 0; bottom: 0; margin: 3em;" onclick="$('#contactModal').modal();">
 		<img style="padding: 1em;" src="./contact.png" class="contact" />
 	</div>
 	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

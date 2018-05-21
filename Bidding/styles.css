@@ -99,3 +99,7 @@ body {
 .miniimage {
   height: 8em;
 }
+
+img {
+  max-width: 100%;
+}

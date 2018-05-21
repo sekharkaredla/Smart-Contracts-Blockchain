@@ -24,10 +24,10 @@
 			<center>
 				<h2 style="color: #000; margin-top: 1em">Login to Access Distributed Voting Services</h2>
 			</center>
-			<div class="row" id="logins" style="padding: 8em">
+			<div class="row" id="logins" style="padding: 8%">
 				<div class="col-sm">
 					<img src="./user.png" style="height: 16em;" id="userpic" />
-					<img src="./admin.png" style="height: 16em; display: none;" id="adminpic" />
+					<img src="./admin.png" style="height: 16em; display: none; max-width: 100%" id="adminpic" />
 				</div>
 				<div class="col-sm">
 					<div style="margin: 1em">
@@ -88,10 +88,10 @@
 					</center>
 				</div>
 			</div>
-			<div id="register" style="display: none; padding: 8em">
+			<div id="register" style="display: none; padding: 8%">
 				<div class="row">
 					<div class="col-sm">
-						<img src="./register.png" style="height: 16em;"/>
+						<img src="./register.png" style="height: 16em; max-width: 100%;"/>
 					</div>
 					<div class="col-sm">
 						<div>
